@@ -16,6 +16,7 @@ builder.Services.AddScoped<IStaticData, StaticDataService>();
 builder.Services.AddScoped<IComplainService, ComplainService>();
 builder.Services.AddScoped<IRequestService, RequestService>();
 builder.Services.AddScoped<IDepartment, Departmant>();
+builder.Services.AddScoped<ITeamService,TeamService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

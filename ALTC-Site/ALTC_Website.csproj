@@ -8,13 +8,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Areas\Admin\Views\Request\**" />
     <Compile Remove="wwwroot\Admin\**" />
-    <Content Remove="Areas\Admin\Views\Request\**" />
     <Content Remove="wwwroot\Admin\**" />
-    <EmbeddedResource Remove="Areas\Admin\Views\Request\**" />
     <EmbeddedResource Remove="wwwroot\Admin\**" />
-    <None Remove="Areas\Admin\Views\Request\**" />
     <None Remove="wwwroot\Admin\**" />
   </ItemGroup>
 
