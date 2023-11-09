@@ -129,7 +129,7 @@
 			<div class="tab__content">
 				<div class="form-wrapper" id="form3" class="hidden">
 					@* <h2>Complain</h2> *@
-					<form>
+						<form asp-action="Create" asp-controller="Complain" method="post">
 							<div class="form-group">
 								<div class="row">
 									<div class="col-12 col-md-6">
@@ -147,12 +147,16 @@
 
 						<div class="form-group">
 							<label for="exampleInputPhone">Phone</label>
-							<input type="Phone" class="form-control" id="exampleInputPhone" placeholder="Phone">
+							<input type="Phone" name="Phone" class="form-control" id="exampleInputPhone" placeholder="Phone">
 						</div>
 						<div class="form-group">
 							<label for="exampleInputDetails">Details Of Complain</label>
-							<textarea class="form-control" id="exampleInputDetails" rows="4" placeholder="Details of Complain"></textarea>
+								<textarea class="form-control" name="Details" id="exampleInputDetails" rows="4" placeholder="Details of Complain"></textarea>
 						</div>
+							<div class="form-group">
+								<label for="exampleInputDetails">Type Of Complain</label>
+								<textarea class="form-control" name="TypeOfComplain" id="exampleInputDetails" rows="4" placeholder="Details of Complain"></textarea>
+							</div>
 			   
 						<button id="margin" type="submit" class="btn btn-primary">Submit</button>
 					</form>

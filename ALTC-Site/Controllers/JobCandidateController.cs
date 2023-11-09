@@ -60,7 +60,7 @@ namespace ALTC_Website.Controllers
             }
             jobcandidateService.Create(request);
 
-            return View();
+            return RedirectToAction("index");
 
 
         }

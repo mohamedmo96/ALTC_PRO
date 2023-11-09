@@ -11,7 +11,5 @@ namespace ALTC_WebSite.Models
         public string Name { get; set; }
         public string? Describtion { get; set; }
         public string? Photo { get; set; }
-        public string? JobTitle { get; set; }
-        public string? Email { get; set; }
     }
 }
