@@ -10,10 +10,10 @@ namespace ALTC_Site.Controllers
         {
             teamService = _teamService;
         }
-        public IActionResult Index()
+        public IActionResult GetALL ()
         {
             var teamMembers = teamService.GetAll();
-            return View(teamMembers);
+            return PartialView("_GetAll",teamMembers);
         }
     }
 }
