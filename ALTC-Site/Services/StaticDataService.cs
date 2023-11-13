@@ -4,6 +4,8 @@ using ALTC_WebSite.Models;
 using Microsoft.Extensions.Options;
 using MongoDB.Bson;
 using MongoDB.Driver;
+using System.Text.Encodings.Web;
+using System.Web;
 
 namespace ALTC_Website.Services
 {
@@ -24,6 +26,7 @@ namespace ALTC_Website.Services
         }
         public void Create(StaticData staticDataaa )
         {
+            HttpUtility.HtmlEncode(staticDataaa.aboutus);
             StaticCollection.InsertOne(staticDataaa);
         }
 

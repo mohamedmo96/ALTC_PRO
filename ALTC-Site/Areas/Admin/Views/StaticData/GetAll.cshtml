@@ -27,9 +27,10 @@
             <td>
                 @Html.DisplayFor(modelItem => item.id)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.aboutus)
-            </td>
+                <td>
+                    @* @Html.DisplayFor(modelItem => item.aboutus) *@
+                    @Html.Raw(item.aboutus)
+                </td>
             <td>
                     @Html.ActionLink("Delete", "Delete", new { id = item.id })
 

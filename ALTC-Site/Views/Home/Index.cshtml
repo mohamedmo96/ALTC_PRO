@@ -52,66 +52,21 @@
 <!-- ======= Featured Services Section ======= -->
 <section id="featured-services" class="featured-services">
     <div class="container" data-aos="fade-up">
-
         <div class="row">
-            <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-                <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-                    <div class="icon"><img src="~/img/dev.svg" /></i></div>
-                    <h4 class="title">
-                        <a href="">
-                            Service
-                            Web Development
-                        </a>
-                    </h4>
-                    <p class="description">Web development is the fundamental (back-end) coding of 
-                        your application or your business website, and it is critical to its success..</p>
+            @foreach (var item in Model)
+            {
+                <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                    <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                        <div class="icon"><img src="/Files/@item.FileName" /></div>
+                        <h4 class="title">
+                            <a href="">
+                                @item.Name
+                            </a>
+                        </h4>
+                        <p class="description">@item.Describtion</p>
+                    </div>
                 </div>
-            </div>
-
-            <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-                <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
-                    <div class="icon"><img src="~/img/ec.svg" /></div>
-                    <h4 class="title">
-                        <a href="">
-                            Ecommerce Development
-
-                        </a>
-                    </h4>
-                    <p class="description">
-                        We provide CMS (Content Management System) and 
-                        e-Commerce development like Shopify, DotNetNuke, WordPress, Magento, and custom Development.
-
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-                <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
-                    <div class="icon"><img src="~/img/ss.svg" /></div>
-                    <h4 class="title">
-                        <a href="">
-                            Mobile App Development
-                        </a>
-                    </h4>
-                    <p class="description">With a transparent development plan, we will code your 
-                        ideas and make them into reality for IOS, Android, and cross-platform apps</p>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-                <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
-                    <div class="icon"><img src="~/img/tt.svg" /></div>
-                    <h4 class="title">
-                        <a href="">
-                            Trending Technologies
-                        </a>
-                    </h4>
-                    <p class="description">Standards in web development changes faster than they can be implemented. 
-                        To stay one step ahead, we focus on trends, new techniques, and approaches.</p>
-                </div>
-
-            </div>
-
+            }
         </div>
 
     </div>
