@@ -38,7 +38,7 @@
 			<div class="tab__content">
 				<div class="form-wrapper " id="form1" class="hidden">
 					@* <h2 >Request a Quote</h2> *@
-				<form>
+			@* 	<form>
 							<div class="form-group">
 								<div class="row">
 									<div class="col-12 col-md-6">
@@ -67,17 +67,17 @@
 								<textarea style="outline: none !important;border-color: none !important;" class="form-control" name="Details" id="Details" rows="4" placeholder="Details Request"></textarea>
 					</div>
 		 
-				   @*  <div class="form-group">
+				    <div class="form-group">
 						<label for="exampleInputFile">File Upload</label>
 						<div class="file-input-container">
 							<label class="file-input-button" for="fileInput">Choose File</label>
 							<input type="file" class="file-input-hidden" id="fileInput">
 						</div>
-					</div> *@
+					</div>
 		 
 					<button id="margin" type="submit" class="btn btn-primary">Submit</button>
-				</form>
-			</div>
+				</form> *@
+			    </div>
 			</div>
 
 			<div class="tab__content">
@@ -225,3 +225,21 @@
 <div id="space">
 </div>
 <div style="margin:100px;"></div>
+<partial name="_ValidationScriptsPartial" />
+
+<script>
+	function GetRequestForm() {
+		$.ajax(
+			{
+				url: "/Request/Create",
+				
+				success: function (result) {
+				
+					document.getElementById("form1").innerHTML = result;
+				}
+			}
+		);
+	}
+
+	$(document).ready(GetRequestForm());
+</script>
