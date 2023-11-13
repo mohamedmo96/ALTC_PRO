@@ -17,8 +17,7 @@ namespace ALTC_Site.Controllers
 
         public IActionResult Index()
         {
-            var model = department.GetAll();
-            return View(model);
+            return View();
         }
 
         public IActionResult Privacy()

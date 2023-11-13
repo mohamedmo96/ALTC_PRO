@@ -17,6 +17,7 @@ builder.Services.AddScoped<IComplainService, ComplainService>();
 builder.Services.AddScoped<IRequestService, RequestService>();
 builder.Services.AddScoped<IDepartment, Departmant>();
 builder.Services.AddScoped<ITeamService,TeamService>();
+builder.Services.AddScoped<ILoginService,LoginService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

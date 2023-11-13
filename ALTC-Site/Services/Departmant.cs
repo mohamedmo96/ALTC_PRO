@@ -24,20 +24,6 @@ namespace ALTC_Website.Services
                 AltcDatabaseSettings.Value.Department);
         }
 
-        public void Create(Department department)
-        {
-
-            DeptCollection.InsertOne(department);
-        }
-
-        public List<Department> GetAll()
-        {
-            return DeptCollection.Find<Department>(x => true).ToList();
-        }
-        public void Delete(string id)
-        {
-            var filter = Builders<Department>.Filter.Eq("_id", ObjectId.Parse(id));
-            DeptCollection.DeleteOne(filter);
-        }
+    
     }
 }
