@@ -748,7 +748,7 @@ aside.aside-left {
   display: block;
 } 
 .margin-top-30 {
-  margin-top: 30px !important;
+  margin-top: px !important;
   display: block;
 } 
 .margin-top-40 {
@@ -2593,3 +2593,14 @@ select:focus,
 a:focus {
     outline: none;
 }
+
+.padding-top-15 {
+    padding-top: 15px;
+}
+
+#nav.fixed {
+    padding-top: 15px;
+}
+
+/*contact us style */
+

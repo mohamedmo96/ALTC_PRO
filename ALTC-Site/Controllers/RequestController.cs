@@ -1,11 +1,13 @@
 ﻿using ALTC_Website.Services;
 using ALTC_Website.ViewModels;
 using ALTC_WebSite.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Driver;
 
 namespace ALTC_Website.Controllers
 {
+    
     public class RequestController : Controller
 
     {
@@ -25,14 +27,14 @@ namespace ALTC_Website.Controllers
         [HttpGet]
         public IActionResult Create()
         {
-            return View();
+            return PartialView();
         }
         [HttpPost]
         public IActionResult Create(RequestVM requestVM) 
         {
             if(!ModelState.IsValid)
             {
-                return View(requestVM);
+                return PartialView(requestVM);
             }
             Request request = new Request() 
             {
@@ -56,7 +58,7 @@ namespace ALTC_Website.Controllers
             }
             
             requestService.Create(request);
-            return View();
+            return PartialView();
         }
     }
 }

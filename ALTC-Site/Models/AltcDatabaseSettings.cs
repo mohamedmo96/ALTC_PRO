@@ -13,5 +13,6 @@
         public string RequestCollection { get; set; }=null!;
         public string ComplainCollection { get; set; }=null !;
         public string TeamCollection { get; set; } = null!;
+        public string AccountCollection {  get; set; } = null!;
     }
 }
