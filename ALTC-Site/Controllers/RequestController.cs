@@ -36,7 +36,9 @@ namespace ALTC_Website.Controllers
             ViewData["lang"]=lang;
             if(!ModelState.IsValid)
             {
-                return PartialView(requestVM);
+               // return RedirectToAction("Index", "contact");
+
+                 return PartialView(requestVM);
             }
             Request request = new Request() 
             {
@@ -55,7 +57,18 @@ namespace ALTC_Website.Controllers
             
             requestService.Create(request);
             return RedirectToAction("Index","contact");
-            //return PartialView();
+           
+        }
+
+        public IActionResult ValidFileExtension(IFormFile file)
+        {
+            string[] extensions = { "png", "jpg" };
+            string extension = Path.GetExtension(file.FileName);
+            if (extensions.Contains(extension.ToLower()))
+            {
+                return Json(true);
+            }
+            return Json(false);
         }
     }
 }

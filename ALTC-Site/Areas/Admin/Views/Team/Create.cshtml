@@ -8,23 +8,20 @@
 
 <div class="row text mx-0">
     <div style="margin: auto!important; width: 90%!important; max-width: 500px!important;">
-        @* <div class="col-md-8 offset-2"> *@
         <p>
             <h1 style="text-align:center;">
                 Add a New Team Member
             </h1>
         </p>
         <div class="row mx-0">
-             @* <div class="col-md-8 offset-2">  *@
             <div style="margin: auto!important; width: 100%!important; " class="">
 
                 <form asp-action="Create" enctype="multipart/form-data">
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                     <div class="form-group">
                         <label asp-for="Language" class="control-label"></label>
-                        @* <input asp-for="Language" class="form-control" /> *@
-                        @* <span asp-validation-for="Language" class="text-danger"></span> *@
-                        <select asp-for="Language"asp-items="languages"></select>
+
+                        <select asp-for="Language" asp-items="languages"></select>
                     </div>
                     <div class="form-group">
                         <label asp-for="Name" class="control-label"></label>
@@ -58,12 +55,14 @@
                     </div>
                     <div class="form-group">
                         <label asp-for="Photo" class="control-label"></label>
-                        <input asp-for="Photo" class="form-control" />
+                        <input asp-for="Photo" class="form-control" accept=".jpg, .jpeg, .png" />
                         <span asp-validation-for="Photo" class="text-danger"></span>
                     </div>
                     <div class="form-group">
                         <a class="btn btn-outline-secondary" asp-action="Index">Show All</a>
-                        <input type="submit" value="Create" class="btn btn-primary float-right" />
+                        <button id="margin" type="submit" class="btn btn-primary">Create</button>
+
+                        @*  <input type="submit" value="Create" class="btn btn-primary float-right" /> *@
                     </div>
                 </form>
 
@@ -71,5 +70,9 @@
         </div>
     </div>
 </div>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
 
-<partial name="_ValidationScriptsPartial" />

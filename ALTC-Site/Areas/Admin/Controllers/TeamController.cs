@@ -36,6 +36,7 @@ namespace ALTC_Site.Areas.Admin.Controllers
         {
             var language = new List<string> { "En", "Ar" };//Enum.GetNames(typeof(Language)).ToString();
             ViewData["lang"] = language;
+           // return PartialView();
             return View();
         }
 
@@ -48,7 +49,7 @@ namespace ALTC_Site.Areas.Admin.Controllers
             {
               //  ModelState.AddModelError("Photo", "Invalid extension");
                 ViewData["lang"] = new List<string> { "En", "Ar" }; //Enum.GetNames(typeof(Language)).ToString();
-
+               // return PartialView(teamMemberVM);
                 return View(teamMemberVM);
             }
             Team teamMember = new Team()

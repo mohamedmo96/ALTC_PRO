@@ -11,7 +11,6 @@ namespace ALTC_Site.ViewModels
         public string Language { get; set; }
 
         [Remote("ValidTeamName", "Team", ErrorMessage = "The full name must contain at least two parts with only Arabic and English letters",AdditionalFields = "Language")]
-
         public string Name { get; set; }
         [RegularExpression(@"^01(0|1|2|5)\d{8}$", ErrorMessage = "Phone Must be 11 Numbers Begins with (010,011,012,015)")]
         public string? Phone { get; set; }

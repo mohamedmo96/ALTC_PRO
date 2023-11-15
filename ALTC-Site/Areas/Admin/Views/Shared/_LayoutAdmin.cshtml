@@ -230,6 +230,8 @@
         <!-- /.control-sidebar -->
     </div>
     <!-- ./wrapper -->
+    @await RenderSectionAsync("Scripts", required: false)
+
     <!-- jQuery -->
     <script src="~/Admin/plugins/jquery/jquery.min.js"></script>
     <!-- jQuery UI 1.11.4 -->
@@ -265,7 +267,6 @@
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
     <script src="~/Admin/dist/js/pages/dashboard.js"></script>
 
-    @await RenderSectionAsync("Scripts", required: false)
 
 
 </body>
