@@ -41,5 +41,39 @@ namespace ALTC_Website.Areas.Admin.Controllers
 
             return RedirectToAction("GetAll");
         }
+        [HttpGet]
+        public IActionResult Edit(string id)
+        {
+            // Retrieve the StaticData object by id
+            var staticData = staticDataa.GetById(id);
+
+            // Check if the object is found
+            if (staticData == null)
+            {
+                return NotFound(); // Return a 404 Not Found response
+            }
+
+            // Pass the StaticData object to the view for editing
+            return View(staticData);
+        }
+        [HttpPost]
+        public IActionResult Edit(string id, StaticData request)
+        {
+            // Check if the provided id is different from the model id
+            if (id != request.id)
+            {
+                return NotFound(); // Return a 404 Not Found response
+            }
+
+            if (!ModelState.IsValid)
+            {
+                return View(request); // Return the view with validation errors
+            }
+
+            // Update the StaticData object
+            staticDataa.Update(request);
+
+            return RedirectToAction("GetAll");
+        }
     }
 }
