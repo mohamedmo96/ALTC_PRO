@@ -34,9 +34,8 @@ namespace ALTC_Website.Controllers
         {
             if (!ModelState.IsValid)
             {
-                return View(requst);
+                RedirectToAction("Contact", "Index", requst);
             }
-            ViewBag.msgf = "Data  Saved";
             requestService.Create(requst);
 
             return RedirectToAction("Index");

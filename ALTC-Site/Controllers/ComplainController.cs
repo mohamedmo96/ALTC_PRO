@@ -30,7 +30,7 @@ namespace ALTC_Website.Controllers
                 //return RedirectToAction("Index"); // Redirect to the list of complaints after creating one
             }
 
-            return View(obj);
+            return RedirectToAction("index");
         }
 
         // GET: List all complaints
