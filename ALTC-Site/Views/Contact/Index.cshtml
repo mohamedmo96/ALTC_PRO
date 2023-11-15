@@ -15,8 +15,6 @@
 }
 
 
-
-
 @if (dir == "ltr")
 {
 	<section id="contact" class="contact" style="margin-top:70px;">
@@ -496,10 +494,11 @@ else
 
 <script>
 	function GetRequestForm() {
+		let lang = '@lang';
 		$.ajax(
 			{
-				url: "/Request/Create",
-				
+				url: "/Request/Create/",
+				data: { lang: lang },
 				success: function (result) {
 				
 					document.getElementById("form1").innerHTML = result;
