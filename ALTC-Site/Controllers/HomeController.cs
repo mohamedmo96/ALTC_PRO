@@ -1,10 +1,10 @@
-﻿using ALTC_Site.Services;
+using ALTC_Site.Services;
 using ALTC_Website.Models;
 using ALTC_Website.Services;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
-namespace ALTC_WebSite.Controllers
+namespace ALTC_Site.Controllers
 {
     public class HomeController : Controller
     {
@@ -15,15 +15,24 @@ namespace ALTC_WebSite.Controllers
             this.department = department;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(string dir, string lang)
         {
-            string lang = "en"; // قم بتحديد اللغة المطلوبة
+            // Store in ViewData to pass to View
+            ViewData["Dir"] = dir;
+            ViewData["Lang"] = lang;
 
-            var model = department.GetBylang(lang);
-            return View(model);
+            // Check lang to select corresponding data
+            if (lang == "en")
+            {
+                // Select en data
+            }
+            else
+            {
+                // select ar data
+            }
+
+            return View();
         }
-
-
         public IActionResult Privacy()
         {
             return View();

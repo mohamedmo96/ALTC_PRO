@@ -2140,7 +2140,7 @@ nav.fixed .logo-after, .fixed nav .logo-after {
 
 .top-nav li a {
   color: #282828;
-  padding: 1.7rem 1rem;
+  padding: 1.2rem 1rem !important;
   opacity: 1;
   transition: all 0.20s linear 0s;
   -o-transition: all 0.20s linear 0s;
