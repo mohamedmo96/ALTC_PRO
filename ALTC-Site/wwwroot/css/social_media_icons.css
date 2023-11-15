@@ -55,20 +55,20 @@ body {
         background-color: #1da1f2;
     }
 
-    .social-icon.github-icon:after {
-        background-color: #24292e;
-    }
 
-    .social-icon.dribbble-icon:after {
+    .social-icon.instagram-icon:after {
         background-color: #ea4c89;
     }
 
-    .social-icon.instagram-icon:after {
-        background-color: #5851db;
+    .social-icon.tiktok-icon:after {
+        background-color: #BB9DFF;
     }
 
     .social-icon.facebook-icon:after {
         background-color: #1769ff;
+    }
+    .social-icon.linkedin-icon:after {
+        background-color: #2275C8;
     }
 
     /*** Animations ***/

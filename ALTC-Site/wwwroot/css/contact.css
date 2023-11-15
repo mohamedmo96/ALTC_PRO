@@ -1,151 +1,45 @@
-/*
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.hidden {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-in-out;
+.arabic-form-content label {
+    display: flex !important;
+}
+.arabic-form-content .tab-label {
+    justify-content:center!important;
 }
 
-#Request {
-    background-color: lightgray;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
+.tab-wrap label {
+    /*text-align: center !important;*/
+   
 }
 
-#margin {
-    margin-top: 5px;
+.tabs label  {
+    /* justify-content: center !important;*/
 }
 
-button {
-    background-color: lightgray;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    width: 100%;
-}
-
-    button.btn-white-bg {
-        background-color: white;
-    }
-
-    button:hover {
-        background-color: white;
-    }
-
- Center-align the submit button within the forms 
-form button[type="submit"] {
-    display: block;
-    margin: 0 auto;
-}
-
-.form-control {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-     Add margin-bottom to create space between input elements 
-    .form-control + .form-control {
-        margin-bottom: 20px;
-    }
-
-.custom-heading {
-    font-size: 40px;
-    color: rgb(196, 25, 25);
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-.custom-span {
-    color: red;
-}
-
-.custom-paragraph {
-    font-size: 24px;
-    color: #333;
-}
-
-.form-wrapper {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease-in-out;
-    margin-bottom: 10px;
-}
-
-
-
-
-
-
-*/
-/*.tab-wrap {
-    margin: 0 auto;
-    width: 50% !important;
-}*/
-
-@media (min-width: 1000px) {
-    .tab-wrap {
-        width: 60% !important;
-        margin: 0 auto;
-    }
-    /*@media (min-width: 768px) {
+    @media (min-width: 1000px) {
+        .tab-wrap {
+            width: 60% !important;
+            margin: 0 auto;
+        }
+        /*@media (min-width: 768px) {
     .tab-wrap {
         width: 80% !important;
     }
 }*/
-    /*@media (max-width: 768px) {
+        /*@media (max-width: 768px) {
     .tab-wrap {
         width: 90% ;
     }
 }*/
 
-    /* 
+        /* 
 @media (min-width: 1200px) {
     .tab-wrap {
         width: 70% !important;
     }
 }*/
 
-    @media (max-width: 900px) {
-        .tab-wrap {
-             display:flex;
-             
-        }
+        @media (max-width: 900px) {
+            .tab-wrap {
+                display: flex;
+            }
+        }        

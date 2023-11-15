@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="ar-eg">
+<html lang="ar-eg" >
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -56,123 +56,42 @@
     <script type="text/javascript" src="~/js/jquery-1.8.3.min.js"></script>
     <script type="text/javascript" src="~/js/jquery-ui.min.js"></script>
 
-
-    <script>
-
-
-        function toggleDirection(language) {
-            if (language === 'ar') {
-                direction = 'ltr';
-            } else if (language === 'eng') {
-                direction = 'rtl';
-            }
-
-            console.log(language);
-            console.log(direction);
-
-                    localStorage.setItem('direction', direction);
-            // Reload the page
-            location.reload();
-            
-            // Check local storage for direction on page load
-        let storedDirection = localStorage.getItem('direction');
-        if (storedDirection) {
-            direction = storedDirection;
-        }
-        }
-
-       
-    </script>
 </head>
-
+@{
+    string dir = "rtl";
+    string lang = "ar";
+}
 <body class="size-1140">
     <!-- PREMIUM FEATURES BUTTON -->
     <div id="page-wrapper">
         <!-- HEADER -->
-        <header role="banner" class="position-absolute margin-top-30 margin-m-top-0 margin-s-top-0">
+      
+        <header role="banner" class="position-absolute margin-m-top-0 margin-s-top-0">
             <!-- Top Navigation -->
-            <nav id="nav" class="background-transparent background-transparent-hightlight full-width sticky padding-top-15 ">
-                    <div class=" d-flex">
+            <nav class="background-transparent background-transparent-hightlight full-width sticky" style="display: flex; align-items: center; line-height: 80%;">
+                <div class="s-12 l-2">
+                    <a href="" class="logo">
+                        <img style="width:43%" class="logo-before" src="~/assets/img/altc-logo2.png" alt="">
+                        <img style="width:43%" class="logo-after" src="~/assets/img/altc-logo2.png" alt="">
+                    </a>
+                </div>
+                <div class="s-12 l-10">
+                    <div class="top-nav right">
+                        <ul class="right chevron " style='margin-bottom:unset !important'>
 
+                             <li><a onclick="toggleLanguage()"  style="padding: 1.2rem 1rem !important;">Eng</a></li> 
 
-
-    <div style="transform: translateY(0px);" class="s-12 l-10">
-                    <div class="top-nav  ">
-
-                            <ul style="display: flex; align-items: center;" class=" chevron">
-
-                                @{
-                                    string direction = "rtl"; // You can replace this with logic to determine the actual text direction
-                                }
-                                @if (direction == "rtl")
-                                {
-                                    <li class="lang">
-                                        <div class="en">
-                                            <img class="" src="img/saudiflag.png" alt="">
-                                        </div>
-                                        <div onclick="toggleDirection('ar')" href="">العربية</div>
-                                    </li>
-                                }
-                                @if (direction == "ltr")
-                                {
-                                    <li class="lang">
-                                        <div class="en">
-                                            <img class="" src="img/united-kingdom.png" alt="">
-                                        </div>
-                                        <div onclick="toggleDirection('eng')" href="">Eng</div>
-                                    </li>
-                                }
-
-
-
-
-
-
-
-
-
-
-
-
-
-                               
-
-                                @if (direction == "rtl")
-                                {
-                                    <li><a style=" color:red" class="nav-link scrollto" asp-area="Admin" asp-controller="Home" asp-action="">Dashboard</a></li>
-                                    <li><a asp-action="index" asp-controller="Home">Home</a></li>
-                                    <li><a asp-action="index" asp-controller="About">About Us</a></li>
-                                    <li><a asp-controller="Contact" asp-action="index">Contact</a></li>
-                                }
-                                else if (direction == "ltr")
-                                {
-                               <li><a style=" color:red" class="nav-link scrollto" asp-area="Admin" asp-controller="Home" asp-action=""> لوحة التحكم </a></li>
-                            <li><a asp-action="index" asp-controller="Home">الرئيسية</a></li>
+                            <li><a style=" color:red" class="nav-link scrollto" asp-area="Admin" asp-controller="Home" asp-action=""> لوحة التحكم </a></li>
+ @*                            <li><a asp-action="index" asp-controller="Home">الرئيسية</a></li>
                             <li><a asp-action="index" asp-controller="About">عننا</a></li>
-                                <li><a asp-controller="Contact" asp-action="index">تواصل</a></li>
-                                }
-                            
-                                
-                              
-                               
+                            <li><a asp-controller="Contact" asp-action="index">تواصل</a></li> *@
+                            <li><a style="padding: 1.2rem 1rem !important;" href="@Url.Action("Index", "Home", new { dir = dir, lang = lang })">الرئيسية</a></li>
+                            <li><a style="padding: 1.2rem 1rem !important;" href="@Url.Action("Index", "About", new { dir = dir, lang = lang })">عننا</a></li>
+                            <li><a style="padding: 1.2rem 1rem !important;" href="@Url.Action("Index", "Contact", new { dir = dir, lang = lang })">تواصل</a></li>
 
                         </ul>
                     </div>
                 </div>
-                    <div style="transform: translateY(-15px); display: flex; align-items: center;" class="s-12 l-2">
-                    <a href="index.html" class="logo">
-                      @*   <!-- Logo version before sticky nav -->
-                        <img class="logo-before" src="img/logo-dark.png" alt="">
-                        
-
-                        <!-- Logo version after sticky nav --> *@
-                        <img style="width:70%" class="logo-before" src="~/assets/img/altc-logo2.png" alt="">
-                        <img style="width:70%" class="logo-after" src="~/assets/img/altc-logo2.png" alt="">
-                    </a>
-                </div>
-                </div>
-
-
             </nav>
         </header>
         @RenderBody()
@@ -182,20 +101,24 @@
       
 
             <div class="social-icons background-dark">
-                <a class="social-icon twitter-icon" href="#">
+                <a class="social-icon twitter-icon" href="https://twitter.com/altctechinc">
                     <i class="fab fa-twitter"></i>
                 </a>
-                <a class="social-icon dribbble-icon" href="#">
-                    <i class="fab fa-dribbble"></i>
-                </a>
-                <a class="social-icon facebook-icon" href="#">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a class="social-icon instagram-icon" href="#">
+                
+               
+                <a class="social-icon instagram-icon" href="https://instagram.com/altctechinc">
                     <i class="fab fa-instagram"></i>
                 </a>
-                <a class="social-icon github-icon" href="#">
-                    <i class="fab fa-github"></i>
+
+                <a class="social-icon linkedin-icon" href="https://www.linkedin.com/company/arab.leading.technology.company.altc?_l=en_US">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a class="social-icon tiktok-icon" href="https://www.tiktok.com/@@altctechcom">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+
+                <a class="social-icon facebook-icon" href="https://www.facebook.com/altctechinc">
+                    <i class="fab fa-facebook-f"></i>
                 </a>
             </div>
 
@@ -245,22 +168,30 @@
         </footer>
 
     </div>
-    @* <script>
-        var direction = "ltr"; // Declare direction in the global scope
+    <script>
+        function toggleLanguage() {
+            var currentUrl = window.location.href;
+            var newUrl;
 
-        function toggleDirection(language) {
-            if (language === 'ar') {
-                direction = 'rtl';
-            } else {
-                direction = 'ltr';
+            if (currentUrl.includes("/ltr/en")) {
+                // Switch to RTL and Arabic
+                newUrl = currentUrl.replace("/ltr/en", "/rtl/ar");
+            }
+            else if (currentUrl.includes("/rtl/ar")) {
+                // Switch to LTR and English
+                newUrl = currentUrl.replace("/rtl/ar", "/ltr/en");
+            }
+            else {
+                // If neither /ltr/en nor /rtl/ar exists, append /ltr/en to the URL
+                newUrl = currentUrl + "Home/Index/ltr/en";
             }
 
-            console.log(language);
-
-            // Optionally set the direction for the entire document
-            document.body.dir = direction;
+            if (newUrl) {
+                // Navigate to the new URL
+                window.location.href = newUrl;
+            }
         }
-    </script> *@
+    </script>
     <script type="text/javascript" src="~/js/responsee.js"></script>
     <script type="text/javascript" src="~/js/contact.js"></script>
 

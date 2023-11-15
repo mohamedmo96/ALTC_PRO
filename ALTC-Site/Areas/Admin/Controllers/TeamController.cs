@@ -9,7 +9,7 @@ using Microsoft.Extensions.Hosting;
 namespace ALTC_Site.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Authorize]
+    //[Authorize]
     public class TeamController : Controller
     {
         private readonly ITeamService teamService;
