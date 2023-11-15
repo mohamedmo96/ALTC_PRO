@@ -31,6 +31,9 @@
     <None Include="Views\Complain\Index.cshtml" />
     <None Include="Views\Contact\Index.cshtml" />
     <None Include="Views\JobCandidate\Create.cshtml" />
+    <None Include="Views\Service\Create.cshtml" />
+    <None Include="Views\Service\Edit.cshtml" />
+    <None Include="Views\Service\Index.cshtml" />
   </ItemGroup>
 
   <ItemGroup>

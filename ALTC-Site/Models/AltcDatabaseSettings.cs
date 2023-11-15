@@ -2,6 +2,7 @@
 {
     public class AltcDatabaseSettings
     {
+        public static object Value { get; internal set; }
         public string ConnectionString { get; set; } = null!;
 
         public string DatabaseName { get; set; } = null!;
@@ -14,5 +15,6 @@
         public string ComplainCollection { get; set; }=null !;
         public string TeamCollection { get; set; } = null!;
         public string AccountCollection {  get; set; } = null!;
+        public string ServiceCollection {  get; set; } = null!;
     }
 }

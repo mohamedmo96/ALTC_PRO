@@ -21,18 +21,12 @@ namespace ALTC_Site.Controllers
             ViewData["Dir"] = dir;
             ViewData["Lang"] = lang;
 
-            // Check lang to select corresponding data
-            if (lang == "en")
-            {
-                // Select en data
-            }
-            else
-            {
-                // select ar data
-            }
+            // Get data based on the selected language
+            var model = department.GetBylang(lang);
 
-            return View();
+            return View(model);
         }
+
         public IActionResult Privacy()
         {
             return View();

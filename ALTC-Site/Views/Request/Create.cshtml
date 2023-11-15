@@ -4,40 +4,62 @@
     ViewData["Title"] = "Create";
     var lang = ViewBag.lang;
 }
+
+<style>
+     
+
+      #file-input {
+        display: none;
+      }
+
+      #file-input-label {
+        font-size: 1em;
+        padding: 7px 15px;
+        margin-botton:10px;
+        border: 1px solid #DEE2E6;
+        border-radius: 6%;
+      }
+    </style>
+
+
 @if (lang == "Ar"||lang=="ar")
 {
     <form asp-action="Create" method="post" enctype="multipart/form-data">
         <div class="form-group">
             <div class="row">
                 <div class="col-12 col-md-6">
-                    <label asp-for="Name" class="control-label">الاسم</label>
-                    <input asp-for="Name" class="form-control" required />
+                    <label style=" display: flex !important ; justify-content: end;" dir="rtl asp-for="Name" class="control-label">الاسم</label>
+                    <input asp-for="Name" class="form-control" />
                     <span asp-validation-for="Name" class="text-danger"></span>
                 </div>
                 <div class="col-12 col-md-6">
-                    <label asp-for="Phone" class="control-label">رقم الهاتف</label>
-                    <input asp-for="Phone" class="form-control" required />
+                    <label style=" display: flex !important ; justify-content: end;;" dir="rtl asp-for="Phone" class="control-label">رقم الهاتف</label>
+                    <input asp-for="Phone" class="form-control" />
                     <span asp-validation-for="Phone" class="text-danger"></span>
                 </div>
             </div>
         </div>
 
         <div class="form-group">
-            <label asp-for="Email" class="control-label">البريد الالكتروني</label>
-            <input asp-for="Email" class="form-control" required />
+            <label style=" display: flex !important ; justify-content: end;;" dir="rtl asp-for="Email" class="control-label">البريد الالكتروني</label>
+            <input asp-for="Email" class="form-control" />
             <span asp-validation-for="Email" class="text-danger"></span>
         </div>
         <div class="form-group">
-            <label asp-for="File" class="control-label">الملف</label>
-            <input asp-for="File" class="form-control" required />
-            <span asp-validation-for="File" class="text-danger"></span>
+            <label id="file-input-label" style=" display: flex !important ; justify-content: end;" asp-for="File" class="control-label">اختار الملف</label>
+            <label id="file-input-label" for="File" class="text-right" dir="rtl">تحميل </label>
+
+            
+            <input style="display:none"  name="اختار الملف" palceholder="اختار الملف" dir="rtl" asp-for="File" class="form-control" />
+
+            <span  dir="rtl" asp-validation-for="File" class="text-danger"></span>
         </div>
-        <div class="form-group">
-            <label asp-for="Details" class="control-label">اترك رسالتك</label>
-            <textarea asp-for="Details" style="outline: none !important;border-color: none !important;" class="form-control" rows="4" placeholder="Details Request"></textarea>
+        <div style="margin-top:10px;" class="form-group">
+            <label  dir="rtl" style=" display: flex !important : justify-content: end;;" asp-for="Details" class="control-label">اترك رسالتك</label>
+            <textarea asp-for="Details" style="outline: none !important;border-color: none !important;" class="form-control" rows="4"></textarea>
         </div>
 
-        <button id="margin" type="submit" class="btn btn-primary">Submit</button>
+        <button id="margin" type="submit" class="btn btn-primary">إرسال</button>
     </form>
 
 }
@@ -69,12 +91,12 @@ else
             <input asp-for="File" class="form-control" accept=".rar, application/pdf, application/msword, application/vnd.openxmlformats-officedocument.wordprocessingml.document" required />
             <span asp-validation-for="File" class="text-danger"></span>
         </div>
-        <div class="form-group">
-            <label asp-for="Details" class="control-label"></label>
-            <textarea asp-for="Details" style="outline: none !important;border-color: none !important;" class="form-control" rows="4" placeholder="Details Request"></textarea>
+        <div  class="form-group">
+            <label  asp-for="Details" class="control-label"></label>
+            <textarea  asp-for="Details" style="outline: none !important;border-color: none !important;" class="form-control" rows="4"></textarea>
         </div>
 
-        <button id="margin" type="submit" class="btn btn-primary">Submit</button>
+        <button id="margin" type="submit" class="btn btn-primary">submit</button>
     </form>
 }
 

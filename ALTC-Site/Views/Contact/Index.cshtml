@@ -15,6 +15,22 @@
 }
 
 
+
+<style>
+
+
+	#file-input {
+		display: none;
+	}
+
+	#file-input-label {
+		font-size: 1em;
+		padding: 7px 15px;
+		margin-botton: 10px;
+		border: 1px solid #DEE2E6;
+		border-radius: 6%;
+	}
+</style>
 @if (dir == "ltr")
 {
 	<section id="contact" class="contact" style="margin-top:70px;">
@@ -42,7 +58,7 @@
 			<div class="container">
 
 
-				<div class="tab-wrap">
+				<div style="z-index:1;" class="tab-wrap">
 					
 
 					<input type="radio" id="tab4" name="tabGroup2" class="tab" checked>
@@ -279,7 +295,7 @@ else
 			<div class="container">
 
 
-				<div class="tab-wrap">
+				<div style="z-index:1;" class="tab-wrap">
 
 
 
@@ -352,26 +368,26 @@ else
 										<div class="row">
 											<div class="col-12 col-md-6">
 												<label for="exampleInputName" class="text-right" dir="rtl">الاسم</label>
-												<input type="text" name="Name" class="form-control text-right" id="Name" placeholder="أدخل الاسم">
+												<input type="text" name="Name" class="form-control text-right" id="Name"   >
 											</div>
 											<div class="col-12 col-md-6">
 												<label for="exampleInputEmail1" class="text-right" dir="rtl">عنوان البريد الإلكتروني</label>
-												<input type="email" name="Email" class="form-control text-right" id="Email" aria-describedby="emailHelp" placeholder="أدخل عنوان البريد الإلكتروني">
+												<input type="email" name="Email" class="form-control text-right" id="Email" aria-describedby="emailHelp">
 											</div>
 										</div>
 									</div>
 
 									<div class="form-group">
 										<label for="exampleInputPhone" class="text-right" dir="rtl">الهاتف</label>
-										<input type="Phone" name="Phone" class="form-control text-right" id="Phone" placeholder="الهاتف">
+										<input type="Phone" name="Phone" class="form-control text-right" id="Phone"   >
 									</div>
 									<div class="form-group">
 										<label for="exampleInputPhone" class="text-right" dir="rtl">الخدمات</label>
-										<input type="text" name="Services" class="form-control text-right" id="Services" placeholder="الخدمات">
+										<input type="text" name="Services" class="form-control text-right" id="Services" >
 									</div>
 									<div class="form-group">
 										<label for="exampleInputDetails" class="text-right" dir="rtl">تفاصيل الطلب</label>
-										<textarea class="form-control text-right" name="Details" id="Details" rows="4" placeholder="تفاصيل الطلب"></textarea>
+										<textarea class="form-control text-right" name="Details" id="Details" rows="4"    "></textarea>
 									</div>
 
 									@*  <div class="form-group">
@@ -396,26 +412,26 @@ else
 										<div class="row">
 											<div class="col-12 col-md-6">
 												<label for="exampleInputName" class="text-right" dir="rtl">الاسم</label>
-												<input type="text" name="Name" class="form-control text-right" id="Name" placeholder="أدخل الاسم">
+												<input type="text" name="Name" class="form-control text-right" id="Name">
 											</div>
 											<div class="col-12 col-md-6">
 												<label for="exampleInputEmail1" class="text-right" dir="rtl">عنوان البريد الإلكتروني</label>
-												<input type="email" name="Email" class="form-control text-right" id="Email" aria-describedby="emailHelp" placeholder="أدخل عنوان البريد الإلكتروني">
+												<input type="email" name="Email" class="form-control text-right" id="Email" aria-describedby="emailHelp ">
 											</div>
 										</div>
 									</div>
 
 									<div class="form-group">
 										<label for="exampleInputPhone" class="text-right" dir="rtl">الهاتف</label>
-										<input type="Phone" name="Phone" class="form-control text-right" id="exampleInputPhone" placeholder="الهاتف">
+										<input type="Phone" name="Phone" class="form-control text-right" id="exampleInputPhone">
 									</div>
 									<div class="form-group">
 										<label for="exampleInputDetails" class="text-right" dir="rtl">تفاصيل الشكوى</label>
-										<textarea class="form-control text-right" name="Details" id="exampleInputDetails" rows="4" placeholder="تفاصيل الشكوى"></textarea>
+										<textarea class="form-control text-right" name="Details" id="exampleInputDetails" rows="4 "></textarea>
 									</div>
 									<div class="form-group">
 										<label for="exampleInputDetails" class="text-right" dir="rtl">نوع الشكوى</label>
-										<textarea class="form-control text-right" name="TypeOfComplain" id="exampleInputDetails" rows="4" placeholder="نوع الشكوى"></textarea>
+										<textarea class="form-control text-right" name="TypeOfComplain" id="exampleInputDetails" rows="4" "></textarea>
 									</div>
 
 									<button id="margin" type="submit" class="btn btn-primary">إرسال</button>
@@ -432,32 +448,40 @@ else
 									<div class="row">
 										<div class="col-12 col-md-6">
 											<label for="exampleInputName" class="text-right" dir="rtl">الاسم</label>
-											<input type="text" name="Name" class="form-control text-right" id="Name" placeholder="أدخل الاسم">
+											<input type="text" name="Name" class="form-control text-right" id="Name"  ">
 										</div>
 										<div class="col-12 col-md-6">
 											<label for="exampleInputEmail1" class="text-right" dir="rtl">عنوان البريد الإلكتروني</label>
-											<input type="email" name="Email" class="form-control text-right" id="Email" aria-describedby="emailHelp" placeholder="أدخل عنوان البريد الإلكتروني">
+											<input type="email" name="Email" class="form-control text-right" id="Email" aria-describedby="emailHelp ">
 										</div>
 									</div>
 								</div>
 
 								<div class="form-group">
 									<label for="exampleInputPhone" class="text-right" dir="rtl">الهاتف</label>
-									<input type="Phone" name="Phone" class="form-control text-right" id="Phone" placeholder="الهاتف">
+									<input type="Phone" name="Phone" class="form-control text-right" id="Phone"  ">
 								</div>
 								<div class="form-group">
 									<label for="exampleInputDetails" class="text-right" dir="rtl">عنوان الوظيفة</label>
-									<input class="form-control text-right" name="JobTitile" id="JobTitile" rows="4" placeholder="عنوان الوظيفة">
+									<input class="form-control text-right" name="JobTitile" id="JobTitile" rows="4 ">
 								</div>
 								<div class="form-group">
 									<label for="exampleInputPhone" class="text-right" dir="rtl">الرسالة</label>
-									<input type="text" name="Message" class="form-control text-right" id="Message" placeholder="الرسالة">
+									<input type="text" name="Message" class="form-control text-right" id="Message">
 								</div>
 
-								<div class="form-group">
-									<label for="File" class="text-right" dir="rtl">تحميل الملف</label>
-									<input type="file" name="File" class="form-control text-right" id="File">
+								<div style="margin-botton:10px;" class="form-group">
+										<label class="text-right control-lable" dir="rtl">الملف</label>
+									<label  id="file-input-label" for="File" class="text-right" dir="rtl">تحميل </label>
+										<input style="display:none" dir="rtl type="file" name="File" class="form-control text-right" id="File">
 								</div>
+									@* <div class="form-group">
+
+										<label id="file-input-label" style=" display: flex !important ; justify-content: end;" asp-for="File" class="control-label">اختار الملف</label>
+										<input style="display:none" name="اختار الملف" palceholder="اختار الملف" dir="rtl" asp-for="File" class="form-control" />
+
+										<span dir="rtl" asp-validation-for="File" class="text-danger"></span>
+									</div *@
 
 								@* <div class="form-group">
 							<label for="exampleInputFile">File Upload</label>
@@ -467,7 +491,7 @@ else
 							</div>
 							</div> *@
 
-								<button id="margin" type="submit" class="btn btn-primary">إرسال</button>
+								<button style="margin-top:20px;"n id="margin" type="submit" class="btn btn-primary">إرسال</button>
 							</form>
 						</div>
 					</div>

@@ -23,6 +23,8 @@ builder.Services.AddScoped<IRequestService, RequestService>();
 builder.Services.AddScoped<IDepartment, Departmant>();
 builder.Services.AddScoped<ITeamService,TeamService>();
 builder.Services.AddScoped<IAccountService, AccountService>();
+builder.Services.AddScoped<IServiceService, ServiceService>();
+
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie();
 
 var app = builder.Build();
@@ -46,7 +48,7 @@ app.UseSession();
 app.MapControllerRoute(
     name: "Admin",
 // pattern: "{controller=Account}/{action=Login}/{id?}");
- pattern: "{area:exists}/{controller=Account}/{action=login}/{id?}");
+    pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
 
 app.MapControllerRoute(
     name: "default",
