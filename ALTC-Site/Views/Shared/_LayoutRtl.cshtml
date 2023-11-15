@@ -89,6 +89,10 @@
                             <li><a style="padding: 1.2rem 1rem !important;" href="@Url.Action("Index", "About", new { dir = dir, lang = lang })">عننا</a></li>
                             <li><a style="padding: 1.2rem 1rem !important;" href="@Url.Action("Index", "Contact", new { dir = dir, lang = lang })">تواصل</a></li>
 
+                        <ul class="right chevron">
+                            <li><a asp-action="index" asp-controller="Home">Home</a></li>
+                            <li><a asp-action="index" asp-controller="About">About Us</a></li>
+                            <li><a  asp-controller="Contact" asp-action="index">Contact</a></li>
                         </ul>
                     </div>
                 </div>

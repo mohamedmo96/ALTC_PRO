@@ -46,7 +46,7 @@ app.UseSession();
 app.MapControllerRoute(
     name: "Admin",
 // pattern: "{controller=Account}/{action=Login}/{id?}");
-pattern: "{area:exists}/{controller=Home}/{action=index}/{id?}");
+ pattern: "{area:exists}/{controller=Account}/{action=login}/{id?}");
 
 app.MapControllerRoute(
     name: "default",

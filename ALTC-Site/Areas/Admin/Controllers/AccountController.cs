@@ -1,14 +1,15 @@
 ﻿using ALTC_Site.Models;
 using ALTC_Site.Services;
-using Microsoft.AspNetCore.Authentication.Cookies;
+using ALTC_Site.ViewModels;
 using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
-using Microsoft.AspNetCore.Authorization;
-using ALTC_Site.ViewModels;
 
 namespace ALTC_Site.Areas.Admin.Controllers
 {
+
     [Area("Admin")]
     public class AccountController : Controller
     {
@@ -39,9 +40,10 @@ namespace ALTC_Site.Areas.Admin.Controllers
                 claims.AddClaim(new Claim(ClaimTypes.Role, accountModel.Role));
                 ClaimsPrincipal principle = new ClaimsPrincipal(claims);
                 HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principle);
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Index", "Request");
 
             }
+            ModelState.AddModelError(user.Password, "wrong password");
             return View(user);
         }
 
@@ -65,7 +67,7 @@ namespace ALTC_Site.Areas.Admin.Controllers
                 return View(account);
             }
             accountService.Add(account);
-           // return View(account);
+          
             return RedirectToAction(nameof(Index));
         }
         [Authorize(Roles = "MasterAdmin")]
@@ -86,6 +88,16 @@ namespace ALTC_Site.Areas.Admin.Controllers
         {
           var accounts= accountService.GetAll();
             return View(accounts);
+        }
+
+        public IActionResult IsUnique(string email)
+        {
+            Account account= accountService.GetByEmail(email);
+            if (account == null)
+            {
+                return Json(true);
+            }
+            return Json(false);
         }
     }
 }

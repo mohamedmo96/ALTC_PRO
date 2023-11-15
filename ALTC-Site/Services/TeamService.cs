@@ -33,7 +33,11 @@ namespace ALTC_Site.Services
 
         public List<Team> GetAll()
         {
-            return teamCollection.Find(_ => true).ToList();
+            return teamCollection.Find(_=>true).ToList();
+        }
+        public List<Team> GetAllByLang(string lang)
+        {
+            return teamCollection.Find(t => t.Language == lang).ToList();
         }
 
         public Team GetById(string id)

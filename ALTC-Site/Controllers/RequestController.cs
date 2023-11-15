@@ -25,13 +25,15 @@ namespace ALTC_Website.Controllers
         }
 
         [HttpGet]
-        public IActionResult Create()
+        public IActionResult Create(string lang)
         {
+            ViewData["lang"] = lang;
             return PartialView();
         }
         [HttpPost]
-        public IActionResult Create(RequestVM requestVM) 
+        public IActionResult Create(RequestVM requestVM,string lang="En") 
         {
+            ViewData["lang"]=lang;
             if(!ModelState.IsValid)
             {
                 return PartialView(requestVM);
@@ -45,20 +47,15 @@ namespace ALTC_Website.Controllers
             };
             if(requestVM.File != null)
             {
-
-                string uploadPath = Path.Combine(hostEnvironment.WebRootPath, "Files");
+               string uploadPath = Path.Combine(hostEnvironment.WebRootPath, "Files");
                string fileName= Abstract.File.Upload(uploadPath, requestVM.File);
-               // string fileName = Guid.NewGuid().ToString() + "_" + requestVM.File.FileName;
-               // string filePath = Path.Combine(uploadPath, fileName);
-               // using (FileStream fileStream = new FileStream(filePath, FileMode.Create))
-               // {
-               //     requestVM.File.CopyTo(fileStream);
-               // }
+
                request.FileName= fileName;
             }
             
             requestService.Create(request);
-            return PartialView();
+            return RedirectToAction("Index","contact");
+            //return PartialView();
         }
     }
 }

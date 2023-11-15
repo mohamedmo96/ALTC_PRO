@@ -1,6 +1,5 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
-using System.ComponentModel.DataAnnotations;
 
 namespace ALTC_WebSite.Models
 {
@@ -14,6 +13,6 @@ namespace ALTC_WebSite.Models
         public string? Email { get; set; }
         public string? Details { get; set; }
         public string? FileName { get; set; }
-        public string? FilePath {  get; set; }
+      //  public string? FilePath {  get; set; }
     }
 }
