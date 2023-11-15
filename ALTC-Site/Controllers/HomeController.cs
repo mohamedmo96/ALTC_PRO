@@ -15,12 +15,24 @@ namespace ALTC_Site.Controllers
             this.department = department;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(string dir, string lang)
         {
-            var model = department.GetAll();
-            return View(model);
-        }
+            // Store in ViewData to pass to View
+            ViewData["Dir"] = dir;
+            ViewData["Lang"] = lang;
 
+            // Check lang to select corresponding data
+            if (lang == "en")
+            {
+                // Select en data
+            }
+            else
+            {
+                // select ar data
+            }
+
+            return View();
+        }
         public IActionResult Privacy()
         {
             return View();

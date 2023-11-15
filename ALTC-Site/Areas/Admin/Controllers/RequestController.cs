@@ -10,7 +10,7 @@ namespace ALTC_Website.Areas.Admin.Controllers
 {
 
     [Area("Admin")]
-    [Authorize]
+    //[Authorize]
     public class RequestController : Controller
     {
         private readonly IWebHostEnvironment hostEnvironment;

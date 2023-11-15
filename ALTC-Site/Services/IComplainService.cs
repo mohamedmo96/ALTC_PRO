@@ -7,5 +7,6 @@ namespace ALTC_Website.Services
         void Add(Complain newComplain);
         Complain GetComplaintById(string id);
         List<Complain> GetAllComplaints();
+        void Add(Login obj);
     }
 }

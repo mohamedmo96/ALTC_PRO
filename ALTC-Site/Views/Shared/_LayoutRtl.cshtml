@@ -1,0 +1,224 @@
+﻿<!DOCTYPE html>
+<html lang="ar-eg" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minimalista - New Amazing HTML5 Template</title>
+    <link rel="stylesheet" href="~/css/components.css">
+    <link rel="stylesheet" href="~/css/icons.css">
+    <link rel="stylesheet" href="~/css/responsee.css">
+    <link rel="stylesheet" href="~/css/social_media_icons.css">
+
+    <link rel="stylesheet" href="~/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="~/owl-carousel/owl.theme.css">
+    <link rel="stylesheet" href="~/css/lightcase.css">
+    <link rel="stylesheet" href="~/css/contact.css">
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap.rtl.css" rel="stylesheet" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap.rtl.min.css" rel="stylesheet" />
+    <!-- Favicons -->
+    <link href="~/assets/img/favicon.png" rel="icon">
+    <link href="~/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <!-- Favicons -->
+    <link href="~/assets/img/favicon.png" rel="icon">
+    <link href="~/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="~/assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="~/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="~/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="~/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="~/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="~/assets/css/style.css" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link href="~/assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="~/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="~/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="~/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="~/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="~/assets/css/style.css" rel="stylesheet">
+    <!-- CUSTOM STYLE -->
+    <link rel="stylesheet" href="~/css/template-style.css">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,400,600,900&subset=latin-ext" rel="stylesheet">
+    <script type="text/javascript" src="~/js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="~/js/jquery-ui.min.js"></script>
+
+</head>
+@{
+    string dir = "rtl";
+    string lang = "ar";
+}
+<body class="size-1140">
+    <!-- PREMIUM FEATURES BUTTON -->
+    <div id="page-wrapper">
+        <!-- HEADER -->
+      
+        <header role="banner" class="position-absolute margin-m-top-0 margin-s-top-0">
+            <!-- Top Navigation -->
+            <nav class="background-transparent background-transparent-hightlight full-width sticky" style="display: flex; align-items: center; line-height: 80%;">
+                <div class="s-12 l-2">
+                    <a href="" class="logo">
+                        <img style="width:43%" class="logo-before" src="~/assets/img/altc-logo2.png" alt="">
+                        <img style="width:43%" class="logo-after" src="~/assets/img/altc-logo2.png" alt="">
+                    </a>
+                </div>
+                <div class="s-12 l-10">
+                    <div class="top-nav right">
+                        <ul class="right chevron " style='margin-bottom:unset !important'>
+
+                             <li><a onclick="toggleLanguage()"  style="padding: 1.2rem 1rem !important;">Eng</a></li> 
+
+                            <li><a style=" color:red" class="nav-link scrollto" asp-area="Admin" asp-controller="Home" asp-action=""> لوحة التحكم </a></li>
+ @*                            <li><a asp-action="index" asp-controller="Home">الرئيسية</a></li>
+                            <li><a asp-action="index" asp-controller="About">عننا</a></li>
+                            <li><a asp-controller="Contact" asp-action="index">تواصل</a></li> *@
+                            <li><a style="padding: 1.2rem 1rem !important;" href="@Url.Action("Index", "Home", new { dir = dir, lang = lang })">الرئيسية</a></li>
+                            <li><a style="padding: 1.2rem 1rem !important;" href="@Url.Action("Index", "About", new { dir = dir, lang = lang })">عننا</a></li>
+                            <li><a style="padding: 1.2rem 1rem !important;" href="@Url.Action("Index", "Contact", new { dir = dir, lang = lang })">تواصل</a></li>
+
+                        <ul class="right chevron">
+                            <li><a asp-action="index" asp-controller="Home">Home</a></li>
+                            <li><a asp-action="index" asp-controller="About">About Us</a></li>
+                            <li><a  asp-controller="Contact" asp-action="index">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        @RenderBody()
+        <!-- FOOTER -->
+        <footer>
+            <!-- Contact Us -->
+      
+
+            <div class="social-icons background-dark">
+                <a class="social-icon twitter-icon" href="https://twitter.com/altctechinc">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                
+               
+                <a class="social-icon instagram-icon" href="https://instagram.com/altctechinc">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <a class="social-icon linkedin-icon" href="https://www.linkedin.com/company/arab.leading.technology.company.altc?_l=en_US">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a class="social-icon tiktok-icon" href="https://www.tiktok.com/@@altctechcom">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+
+                <a class="social-icon facebook-icon" href="https://www.facebook.com/altctechinc">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+            </div>
+
+
+            <!-- التذييل الرئيسي -->
+            <section class="section-small-padding text-center background-dark full-width">
+                <div class="line">
+                    <div class="margin">
+                        <!-- العمود 1 -->
+                        <div class="s-12 m-12 l-4 margin-m-bottom-30">
+                            <h3 class="text-size-16">عنوان الشركة</h3>
+                            <p class="text-size-14">
+                                شارع الحلبسة 5 <br>
+                                لندن - المملكة المتحدة<br>
+                                أوروبا
+                            </p>
+                        </div>
+                        <!-- العمود 2 -->
+                        <div class="s-12 m-12 l-4 margin-m-bottom-30">
+                            <h3 class="text-size-16">البريد الإلكتروني</h3>
+                            <p class="text-size-14">
+                                contact@sampledomain.com<br>
+                                office@sampledomain.com
+                            </p>
+                        </div>
+                        <!-- العمود 3 -->
+                        <div class="s-12 m-12 l-4 ">
+                            <h3 class="text-size-16">أرقام الهواتف</h3>
+                            <p class="text-size-14">
+                                0800 4521 800 50<br>
+                                0450 5896 625 16<br>
+                                0798 6546 465 15
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <hr class="break margin-top-bottom-0" style="border-color: rgba(0, 0, 0, 0.80);">
+
+            <!-- التذييل السفلي -->
+            <section class="padding background-dark full-width">
+                <div class="text-center">
+                    <p class="text-size-12">حقوق النشر 2019، تصميم الرؤية - حديقة الرسومات</p>
+                    <p class="text-size-12">جميع الصور مشتراة من Bigstock. لا تستخدم الصور في موقع الويب الخاص بك.</p>
+                </div>
+            </section>
+        </footer>
+
+    </div>
+    <script>
+        function toggleLanguage() {
+            var currentUrl = window.location.href;
+            var newUrl;
+
+            if (currentUrl.includes("/ltr/en")) {
+                // Switch to RTL and Arabic
+                newUrl = currentUrl.replace("/ltr/en", "/rtl/ar");
+            }
+            else if (currentUrl.includes("/rtl/ar")) {
+                // Switch to LTR and English
+                newUrl = currentUrl.replace("/rtl/ar", "/ltr/en");
+            }
+            else {
+                // If neither /ltr/en nor /rtl/ar exists, append /ltr/en to the URL
+                newUrl = currentUrl + "Home/Index/ltr/en";
+            }
+
+            if (newUrl) {
+                // Navigate to the new URL
+                window.location.href = newUrl;
+            }
+        }
+    </script>
+    <script type="text/javascript" src="~/js/responsee.js"></script>
+    <script type="text/javascript" src="~/js/contact.js"></script>
+
+    <script src="~/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="~/assets/vendor/aos/aos.js"></script>
+    <script src="~/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="~/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="~/assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="~/assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="~/assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="~/assets/js/main.js"></script>
+    <script type="text/javascript" src="~/js/jquery.events.touch.js"></script>
+    <script type="text/javascript" src="~/owl-carousel/owl.carousel.js"></script>
+    <script type="text/javascript" src="~/js/template-scripts.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://kit.fontawesome.com/1c2c2462bf.js" crossorigin="anonymous"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+
+

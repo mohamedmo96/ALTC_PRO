@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>AdminLTE 3 | Dashboard</title>
+    <link type="text/css" href="~/sample/css/sample.css" rel="stylesheet" media="screen" />
+  
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -70,7 +72,7 @@
                         <img src="~/Admin/dist/img/user1-128x128.jpg" class="img-circle elevation-2" alt="User Image" style="width:50px; height:50px;">
                     </div>
                     <div class="info">
-                        <a href="/Admin/Home/Index" class="d-block">Mohamed</a>
+                        <a href="/Admin/Home/Index" class="d-block">ALTC DashBoard</a>
                     </div>
                 </div> *@
 
@@ -114,7 +116,7 @@
                        
                         <li class="nav-item">
 
-                            <a href="~/Admin/Job/Index" class="nav-link">
+                            <a href="~/Admin/Job/GetAll" class="nav-link">
                                 <i class="nav-icon far fa-image" style="color:dodgerblue"></i>
 
 
@@ -180,6 +182,28 @@
                         </li>
                     }
 
+                        <li class="nav-item">
+                            <a asp-action="Create" asp-controller="Departman" asp-area="Admin" class="nav-link">
+                                <i class="nav-icon far fa-envelope" style="color:dodgerblue"></i>
+
+
+                                <p>
+                                    Create Department 
+
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a asp-action="GetAll" asp-controller="Departman" asp-area="Admin" class="nav-link">
+                                <i class="nav-icon far fa-envelope" style="color:dodgerblue"></i>
+
+
+                                <p>
+                                    ALL Department
+
+                                </p>
+                            </a>
+                        </li>
                     </ul>
 
                 </nav>
@@ -188,14 +212,14 @@
             <!-- /.sidebar -->
         </aside>
         <!-- Content Wrapper. Contains page content -->
-        <div class="content-wrapper">
+        <div style="padding: 9px 22px !important;" class="content-wrapper">
             @RenderBody()
 
         </div>
         <!-- /.content-wrapper -->
         <footer class="main-footer">
-            <strong>Copyright &copy; 2014-2021</strong>
-            All rights reserved.
+            <strong>Copyright &copy; 2023-2024</strong>
+            All rights reserved ALTC.
             
         </footer>
 

@@ -1,4 +1,5 @@
-﻿ <!-- Favicons -->
+﻿
+<!-- Favicons -->
 <link href="~/assets/img/favicon.png" rel="icon">
 <link href="~/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
@@ -16,17 +17,37 @@
 <!-- Template Main CSS File -->
 <link href="~/assets/css/style.css" rel="stylesheet">
 
-<div style="margin-top:100px;"></div>
+@{
+    string dir = "ltr";
+    string lang = "en";
+    Layout = "~/Views/Shared/_LayoutLtr.cshtml";
+    if (ViewData["Dir"] != null & ViewData["Lang"] != null)
+    {
+        dir = ViewData["Dir"].ToString();
+        lang = ViewData["Lang"].ToString();
+
+        if (dir == "rtl")
+        {
+            Layout = "~/Views/Shared/_LayoutRtl.cshtml";
+        }
+    }
+} 
+
+
+
+@if (dir == "ltr")
+{
+   
+
+<div style="margin-top:62px;"></div>
 <!-- ======= Hero Section ======= -->
 <section id="hero" class="d-flex align-items-center">
     <div class="container" data-aos="zoom-out" data-aos-delay="100">
         <h1> Arab Leading Technology <span> ALTC</span></h1>
         <h2>Website and App development solution for transforming and innovating businesses.</h2>
-        <div class="d-flex">
-            <a href="#about" class="btn-get-started scrollto">Get Started</a>
-            <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox btn-watch-video"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
+        <daiv class="d-flex justify-content-center">
+            <a href="/Contact" class="btn-get-started scrollto">Get Started</a>
         </div>
-    </div>
 </section><!-- End Hero -->
 
 <footer id="footer">
@@ -56,7 +77,7 @@
         <div class="row">
             <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
                 <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-                    <div class="icon"><img src="~/img/dev.svg" /></i></div>
+                    <div class="icon"><img src="~/img/dev.svg" /></div>
                     <h4 class="title">
                         <a href="">
                             Service
@@ -98,7 +119,7 @@
                 </div>
             </div>
 
-            <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="  col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
                 <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
                     <div class="icon"><img src="~/img/tt.svg" /></div>
                     <h4 class="title">
@@ -129,7 +150,7 @@
             </p>
         </div>
 
-        <div class="row">
+        <div style="gap: 56px;" class="d-flex gap-6">
             <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
                 <img src="assets/img/about.jpg" class="img-fluid" alt="">
             </div>
@@ -233,43 +254,175 @@
 
     </div>
 </section><!-- End Services Section -->
-<!-- ======= Team Section ======= -->
-<section id="team" class="team section-bg">
+}
+
+@* english *@
+
+else
+{
+
+<div style="margin-top:62px;"></div>
+<!-- ======= Hero Section ======= -->
+<section id="hero" class="d-flex align-items-center">
+    <div class="container" data-aos="zoom-out" data-aos-delay="100">
+        <h1> التكنولوجيا العربية الرائدة <span> ALTC</span></h1>
+        <h2>حل تطوير مواقع الويب والتطبيقات لتحويل الأعمال التجارية وابتكارها.</h2>
+        <daiv class="d-flex justify-content-center">
+            <a href="/Contact" class="btn-get-started scrollto">ابدا</a>
+    </div>
+</section><!-- End Hero -->
+
+<footer id="footer">
+
+    <div class="footer-newsletter">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <h4>
+                        أفكار كبيرة، أشخاص مبدعون، تقنيات جديدة
+                    </h4>
+                
+                    <form action="" method="post">
+                        <input type="email" name="email"><input type="submit" value="اشترك">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</footer><!-- End Footer -->
+
+<!-- ======= قسم حول ======= -->
+<section id="about" class="about section-bg">
     <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-            <h2>Team</h2>
-            <h3>Our Hardworking <span>Team</span></h3>
-            <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
+            <h2>السيرة الذاتية</h2>
+            <h3>اعرف المزيد <span>عن ALTC</span></h3>
+            <p>
+                مرحبًا! نحن Arab Leading Technology
+                شركة رائدة في مجال التسويق الرقمي، وتطوير الويب، وتطوير تطبيقات الهواتف المحمولة.
+            </p>
+        </div>
+
+        <div style="gap: 56px;" class="d-flex flex-row-reverse gap-6">
+            <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+                <img src="assets/img/about.jpg" class="img-fluid" alt="">
+            </div>
+            <div class="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="100">
+                <h3>
+                    أفكار كبيرة، أشخاص مبدعين، تقنيات جديدة
+                </h3>
+                <p class="fst-italic">
+                    وكالة رائدة في مجال حلول الويب الشاملة والتسويق الرقمي، نقدم مجموعة شاملة
+                    من الخدمات المهنية مثل التحول الرقمي، تصميم الويب، تطوير الويب، تطوير تطبيقات الهواتف المحمولة،
+                    تحسين محركات البحث (SEO)، حلول التجارة الإلكترونية، تصميم واجهة المستخدم/تجربة المستخدم (UI/UX)،
+                    الإعلان بالدفع للنقر (PPC)، التسويق عبر وسائل التواصل الاجتماعي، إنتاج الفيديو، إنشاء المحتوى،
+                    التسويق عبر البريد الإلكتروني، وتسويق الآلي.
+                </p>
+                <ul>
+                    <li>
+                        <i class="bx bx-store-alt"></i>
+                        <div>
+                            <h5>
+                                إدارة المشاريع بشكل مبسط
+                            </h5>
+                            <p>
+                                تريد النتائج. لقد وجدنا أن أفضل طريقة للحصول عليها هي إجراء البحث مسبقًا -
+                                حول عملك، منافسيك
+                                ، سوقك المستهدف، والسمات النفسية لعملائك.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="bx bx-images"></i>
+                        <div>
+                            <h5>
+                                فريق متخصص من الخبراء
+                            </h5>
+                            <p>
+                                لأن عملائنا يتوقعون الأفضل، نستخدم فقط أفضل الأشخاص. يضمن عملية التأهيل الصارمة لدينا
+                                أن نوظف محترفين ذوي خبرة ومهارات عالية.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+                <p>
+                    أنظمة تكنولوجيا المعلومات في شركتك هي حاسمة لنجاحها. نحن واثقون من أننا يمكننا توفير حلول ويب وجوال
+                    ومحتوى رقمي عالية الجودة، وخدمات تسويق رقمي في ALTC ستعود بالفائدة على عملك.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section><!-- نهاية قسم حول -->
+@* //////////////////// *@
+
+
+
+<!-- ======= قسم الخدمات ======= -->
+<section id="services" class="services">
+    <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+            <h2>الخدمات</h2>
+            <h3>تحقق من <span>خدماتنا</span></h3>
+            <p>
+                يمكن أن نقول الذي في الأوقات الحالية يتسنى لنا تجربته. الوقت للاستمتاع والابتكار
+                واكتشاف الفرص الجديدة.
+            </p>
         </div>
 
         <div class="row">
-           
-
-                <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-                    <div class="member">
-                        <div class="member-img">
-                            <img src="~/assets/img/team//team-1.jpg" class="img-fluid" alt="">
-                            <div class="social">
-                                <a href=""><i class="bi bi-twitter"></i></a>
-                                <a href=""><i class="bi bi-facebook"></i></a>
-                                <a href=""><i class="bi bi-instagram"></i></a>
-                                <a href=""><i class="bi bi-linkedin"></i></a>
-                            </div>
-                        </div>
-                        <div class="member-info">
-                            <h4>Mohmed Mostafa</h4>
-                            <span>JobTitle</span>
-                        </div>
-                    </div>
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+                <div class="icon-box">
+                    <div class="icon"><img src="~/img/startup.png" /> </div>
+                    <h4><a href="">التحول الرقمي</a></h4>
+                    <p>المتعة والتلفيق والابتزاز الذين يحبذونهم أولئك الذين يشعرون بالألم والذين يكرهونهم</p>
                 </div>
+            </div>
 
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
+                <div class="icon-box">
+                    <div class="icon"><img src="~/img/smo.png" /></div>
+                    <h4><a href="">التسويق الرقمي</a></h4>
+                    <p>المستغرب في أخذ الحق في النقد في مرحلة تسلية تظهر فيها التعديات</p>
+                </div>
+            </div>
 
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
+                <div class="icon-box">
+                    <div class="icon"><img src="~/img/m3.png" /></div>
+                    <h4><a href="">حلول الويب</a></h4>
+                    <p>الذين لا يستثنون سوى الذين يتولون مسؤولياتهم ويكونون متهمين بأداء أعمالهم</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
+                <div class="icon-box">
+                    <div class="icon"><img src="~/img/ap.png" /></div>
+                    <h4><a href="">حلول الهواتف المحمولة</a></h4>
+                    <p>في مرحلة تجميل الواقع والاتهام والكراهية تلك التي تستحق المراقبة والاستغناء</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
+                <div class="icon-box">
+                    <div class="icon"><img src="~/img/c.png" /></div>
+                    <h4><a href="">المحتوى الرقمي</a></h4>
+                    <p>تلك التي يتعين على الإنسان اتخاذها. لا يمكن أن تكون مطمئنة ومكرهة ومتجهة إلى الجواب</p>
+                </div>
+            </div>
 
         </div>
 
     </div>
-</section><!-- End Team Section -->
+</section><!-- نهاية قسم الخدمات -->
+}
+
+
+ 
 
 
 <script src="~/assets/vendor/purecounter/purecounter_vanilla.js"></script>

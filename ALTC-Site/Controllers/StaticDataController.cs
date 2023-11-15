@@ -19,6 +19,11 @@ namespace ALTC_Website.Controllers
         {
             return View();
         }
+        public IActionResult GetAll()
+        {
+            var model = staticDataa.GetAll();
+            return View(model);
+        }
         [HttpPost]
         public IActionResult Create(StaticData staticData)
         {

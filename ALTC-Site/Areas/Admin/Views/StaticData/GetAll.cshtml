@@ -23,17 +23,24 @@
     </thead>
     <tbody>
 @foreach (var item in Model) {
+        <div style=" margin-left: 403px;">
+                <div style="margin-bottom:-24px;  margin-left: 72px; ">
+               @Html.ActionLink("Delete", "Delete", new { id = item.id })
+
+               </div>
+
+                @Html.ActionLink("Edit", "Edit", new { id = item.id })
+
+        </div>
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.id)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.aboutus)
-            </td>
-            <td>
-                    @Html.ActionLink("Delete", "Delete", new { id = item.id })
-
-            </td>
+                <td>
+                    @* @Html.DisplayFor(modelItem => item.aboutus) *@
+                    @Html.Raw(item.aboutus)
+                </td>
+          
         </tr>
 }
     </tbody>

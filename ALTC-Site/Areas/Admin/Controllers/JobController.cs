@@ -1,11 +1,11 @@
 ﻿using ALTC_Website.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ALTC_Website.Areas.Admin.Controllers
 {
     [Area("Admin")]
-
-    public class JobController : Controller
+     public class JobController : Controller
     {
         private readonly IJobcandidateService jobcandidateService;
 

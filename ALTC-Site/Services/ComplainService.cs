@@ -38,5 +38,9 @@ namespace ALTC_WebSite.Services
             return _complainCollection.Find(_ => true).ToList();
         }
 
+        public void Add(Login obj)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
