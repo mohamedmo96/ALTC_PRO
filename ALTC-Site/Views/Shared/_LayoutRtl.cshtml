@@ -68,7 +68,7 @@
       
         <header role="banner" class="position-absolute margin-m-top-0 margin-s-top-0">
             <!-- Top Navigation -->
-            <nav class="background-transparent background-transparent-hightlight full-width sticky" style="display: flex; align-items: center; line-height: 80%;">
+            <nav class="z-index:99999999; background-transparent background-transparent-hightlight full-width sticky" style="display: flex; align-items: center; line-height: 80%;">
                 <div class="s-12 l-2">
                     <a href="" class="logo">
                         <img style="width:43%" class="logo-before" src="~/assets/img/altc-logo2.png" alt="">
@@ -82,17 +82,11 @@
                              <li><a onclick="toggleLanguage()"  style="padding: 1.2rem 1rem !important;">Eng</a></li> 
 
                             <li><a style=" color:red" class="nav-link scrollto" asp-area="Admin" asp-controller="Home" asp-action=""> لوحة التحكم </a></li>
- @*                            <li><a asp-action="index" asp-controller="Home">الرئيسية</a></li>
-                            <li><a asp-action="index" asp-controller="About">عننا</a></li>
-                            <li><a asp-controller="Contact" asp-action="index">تواصل</a></li> *@
+                         
                             <li><a style="padding: 1.2rem 1rem !important;" href="@Url.Action("Index", "Home", new { dir = dir, lang = lang })">الرئيسية</a></li>
-                            <li><a style="padding: 1.2rem 1rem !important;" href="@Url.Action("Index", "About", new { dir = dir, lang = lang })">عننا</a></li>
+                            <li><a style="padding: 1.2rem 1rem !important;" href="@Url.Action("Index", "About", new { dir = dir, lang = lang })">من نحن</a></li>
                             <li><a style="padding: 1.2rem 1rem !important;" href="@Url.Action("Index", "Contact", new { dir = dir, lang = lang })">تواصل</a></li>
 
-                        <ul class="right chevron">
-                            <li><a asp-action="index" asp-controller="Home">Home</a></li>
-                            <li><a asp-action="index" asp-controller="About">About Us</a></li>
-                            <li><a  asp-controller="Contact" asp-action="index">Contact</a></li>
                         </ul>
                     </div>
                 </div>
