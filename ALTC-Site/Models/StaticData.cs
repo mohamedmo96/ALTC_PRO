@@ -10,8 +10,9 @@ namespace ALTC_WebSite.Models
         [BsonRepresentation(BsonType.ObjectId)]
         public string? id { get; set; }
         public string? aboutus { get; set; }
-      
-        
+        public string? lang { get; set; }
+
+
 
 
     }

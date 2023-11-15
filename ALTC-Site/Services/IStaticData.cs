@@ -10,6 +10,7 @@ namespace ALTC_Website.Services
         void Delete(string id);
         StaticData GetById(string id);
         void Update(StaticData staticData);
+        List<StaticData> GetBylang(string lang);
 
     }
 }
