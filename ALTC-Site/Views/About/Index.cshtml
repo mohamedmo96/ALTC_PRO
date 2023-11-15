@@ -20,7 +20,7 @@
 @if (dir == "ltr")
 {
 
-    <section style="margin-top:61px; " id="about" class="about section-bg">
+    <section id="about" class="about section-bg">
         <div class="container" data-aos="fade-up">
 
             <div class="section-title">
@@ -155,7 +155,7 @@ else
 {
 
     <!-- ======= قسم حول ======= -->
-    <section style="margin-top:61px; " id="about" class="about section-bg">
+    <section id="about" class="about section-bg">
         <div class="container" data-aos="fade-up">
 
             <div class="section-title">
@@ -280,8 +280,6 @@ else
     </section>
 
     <!-- نهاية قسم الخدمات -->
-    <section id="team-members">
-    </section>
 }
 
 
@@ -291,15 +289,14 @@ else
         $.ajax({
             url: "/team/getall",
 
-            success: function (result) {
-                console.log(result);
-                document.getElementById("team-members").innerHTML = result;
-            },
-            error: function (xhr, status, error) {
-                //console.log("kk");
-                console.log(error);
-            }
-        });
+<script src="~/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+<script src="~/assets/vendor/aos/aos.js"></script>
+<script src="~/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="~/assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="~/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="~/assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="~/assets/vendor/waypoints/noframework.waypoints.js"></script>
+<script src="~/assets/vendor/php-email-form/validate.js"></script>
 
-    });
-</script>
+<!-- Template Main JS File -->
+<script src="~/assets/js/main.js"></script>

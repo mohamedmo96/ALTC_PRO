@@ -68,7 +68,7 @@
         <!-- HEADER -->
         <header  role="banner" class="position-absolute margin-m-top-0 margin-s-top-0">
             <!-- Top Navigation -->
-            <nav class="background-transparent background-transparent-hightlight full-width sticky" style="display: flex; align-items: center; line-height: 80%;">
+            <nav class="background-transparent background-transparent-hightlight full-width sticky     box-shadow: 0px 1px 4px whitesmoke;" style="display: flex; align-items: center; line-height: 80%;">
                 <div class="s-12 l-2">
                     <a href="" class="logo">
                         <img style="width:43%" class="logo-before" src="~/assets/img/altc-logo2.png" alt="">
@@ -82,7 +82,7 @@
                             <li><a onclick="toggleLanguage()" style="padding: 1.2rem 1rem !important;">العربية</a></li>
 
 
-                            <li><a style="color:red; padding: 1.2rem 1rem !important;" class="nav-link scrollto" asp-area="Admin" asp-controller="Home" asp-action="">Dashboard</a></li>
+                            @* <li><a style="color:red; padding: 1.2rem 1rem !important;" class="nav-link scrollto" asp-area="Admin" asp-controller="Home" asp-action="">Dashboard</a></li> *@
                             <li><a style="padding: 1.2rem 1rem !important;" href="@Url.Action("Index", "Home", new { dir = dir, lang = lang })">Home</a></li>
                             <li><a style="padding: 1.2rem 1rem !important;" href="@Url.Action("Index", "About", new { dir = dir, lang = lang })">About Us</a></li>
                             <li><a style="padding: 1.2rem 1rem !important;" href="@Url.Action("Index", "Contact", new { dir = dir, lang = lang })">Contact</a></li>

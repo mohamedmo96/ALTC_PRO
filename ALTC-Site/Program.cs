@@ -23,6 +23,8 @@ builder.Services.AddScoped<IRequestService, RequestService>();
 builder.Services.AddScoped<IDepartment, Departmant>();
 builder.Services.AddScoped<ITeamService,TeamService>();
 builder.Services.AddScoped<IAccountService, AccountService>();
+builder.Services.AddScoped<IServiceService, ServiceService>();
+
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie();
 
 var app = builder.Build();
