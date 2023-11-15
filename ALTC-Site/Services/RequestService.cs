@@ -6,7 +6,7 @@ namespace ALTC_Website.Services
 {
     public class RequestService : IRequestService
     {
-        //private readonly 
+        
         private readonly IMongoCollection<Request> requestCollection;
 
         public RequestService(

@@ -2,77 +2,86 @@
 
 @{
     ViewData["Title"] = "Create";
+    var lang = ViewBag.lang;
+}
+@if (lang == "Ar")
+{
+    <form asp-action="Create" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <label asp-for="Name" class="control-label">الاسم</label>
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <div class="col-12 col-md-6">
+                    <label asp-for="Phone" class="control-label">رقم الهاتف</label>
+                    <input asp-for="Phone" class="form-control" />
+                    <span asp-validation-for="Phone" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Email" class="control-label">البريد الالكتروني</label>
+            <input asp-for="Email" class="form-control" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="File" class="control-label">الملف</label>
+            <input asp-for="File" class="form-control" />
+            <span asp-validation-for="File" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Details" class="control-label">اترك رسالتك</label>
+            <textarea asp-for="Details" style="outline: none !important;border-color: none !important;" class="form-control" rows="4" placeholder="Details Request"></textarea>
+        </div>
+
+        <button id="margin" type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+}
+else
+{
+    <form asp-action="Create" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <label asp-for="Name" class="control-label"></label>
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <div class="col-12 col-md-6">
+                    <label asp-for="Phone" class="control-label"></label>
+                    <input asp-for="Phone" class="form-control" />
+                    <span asp-validation-for="Phone" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Email" class="control-label"></label>
+            <input asp-for="Email" class="form-control" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="File" class="control-label"></label>
+            <input asp-for="File" class="form-control" />
+            <span asp-validation-for="File" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Details" class="control-label"></label>
+            <textarea asp-for="Details" style="outline: none !important;border-color: none !important;" class="form-control" rows="4" placeholder="Details Request"></textarea>
+        </div>
+
+        <button id="margin" type="submit" class="btn btn-primary">Submit</button>
+    </form>
 }
 
-<form asp-action="Create" method="post" enctype="multipart/form-data">
-	<div class="form-group">
-		<div class="row">
-			<div class="col-12 col-md-6">
-                <label asp-for="Name" class="control-label"></label>
-                <input asp-for="Name" class="form-control" />
-                <span asp-validation-for="Name" class="text-danger"></span>
-			</div>
-			<div class="col-12 col-md-6">
-                <label asp-for="Phone" class="control-label"></label>
-                <input asp-for="Phone" class="form-control" />
-                <span asp-validation-for="Phone" class="text-danger"></span>
-			</div>
-		</div>
-	</div>
-
-	<div class="form-group">
-        <label asp-for="Email" class="control-label"></label>
-        <input asp-for="Email" class="form-control" />
-        <span asp-validation-for="Email" class="text-danger"></span>
-	</div>
-    <div class="form-group">
-        <label asp-for="File" class="control-label"></label>
-        <input asp-for="File" class="form-control" />
-        <span asp-validation-for="File" class="text-danger"></span>
-    </div>
-	<div class="form-group">
-         <label asp-for="Details" class="control-label"></label>
-		<textarea asp-for="Details" style="outline: none !important;border-color: none !important;" class="form-control"  rows="4" placeholder="Details Request"></textarea>
-	</div>
-
-	<button id="margin" type="submit" class="btn btn-primary">Submit</button>
-</form>
-
-@*         <form asp-action="Create" method="post" enctype="multipart/form-data">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Name" class="control-label"></label>
-                <input asp-for="Name" class="form-control" />
-                <span asp-validation-for="Name" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Phone" class="control-label"></label>
-                <input asp-for="Phone" class="form-control" />
-                <span asp-validation-for="Phone" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Email" class="control-label"></label>
-                <input asp-for="Email" class="form-control" />
-                <span asp-validation-for="Email" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Details" class="control-label"></label>
-                <input asp-for="Details" class="form-control" />
-                <span asp-validation-for="Details" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="File" class="control-label"></label>
-                <input asp-for="File" class="form-control" />
-                <span asp-validation-for="File" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
- *@
 
 
-<partial name="_ValidationScriptsPartial" />
-@* @section Scripts {
+
+@* <partial name="_ValidationScriptsPartial" /> *@
+@section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-} *@
+}
