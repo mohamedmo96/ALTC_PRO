@@ -15,7 +15,7 @@ namespace ALTC_Website.ViewModels
         public string Email { get; set; }
         public string? Details { get; set; }
         // [FileExtensions(Extensions = "pdf,rar,", ErrorMessage = "Only JPG, JPEG, PNG, and PDF files are allowed.")]
-        [Remote("ValidFileExtension","Request",ErrorMessage ="Invalid file extension")]
+      //  [Remote("ValidFileExtension","Request",ErrorMessage ="Invalid file extension")]
         public IFormFile File { get; set; }
 
     }

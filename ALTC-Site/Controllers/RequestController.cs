@@ -25,15 +25,20 @@ namespace ALTC_Website.Controllers
         }
 
         [HttpGet]
-        public IActionResult Create(string lang)
+        public IActionResult Create(string dir, string lang)
         {
             ViewData["lang"] = lang;
+            ViewData["dir"] = dir;
+
             return PartialView();
         }
         [HttpPost]
-        public IActionResult Create(RequestVM requestVM,string lang="En") 
+        public IActionResult Create(RequestVM requestVM, string lang , string dir) 
         {
-            ViewData["lang"]=lang;
+            //ViewData["lang"]=lang;
+         //var  lang = ViewBag.lang;
+           //ViewData["dir"]=dir;
+           //var dir=ViewBag.dir;
             if(!ModelState.IsValid)
             {
                // return RedirectToAction("Index", "contact");
@@ -56,7 +61,8 @@ namespace ALTC_Website.Controllers
             }
             
             requestService.Create(request);
-            return RedirectToAction("Index","contact");
+            return RedirectToAction("Index", "contact", new {dir=dir,lang=lang});
+            //return RedirectToAction("Index", "contact", new {dir=dir,lang=lang});
            
         }
 
