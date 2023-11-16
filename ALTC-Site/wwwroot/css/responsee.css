@@ -911,22 +911,26 @@ nav.breadcrumb-nav ul li:last-child:after {content:"";}
     position:relative;
   	top:60px;
   }
-  .nav-text {
-    color:#fff;
-    display:inline-block;
-    margin-right:0;
-    width:auto;
-    position:fixed;
-    top:0;
-  	left:0;
-  	background:none repeat scroll 0 0 #1c3849;
-  	height:60px;
-  	width:60px;
-  	text-align:center;
-  	line-height:60px;
-  	z-index:50;
-  	padding-top:15px;
-  }  
+    .nav-text {
+        color: #fff;
+        display: inline-block;
+        margin-right: 0;
+        width: auto;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background: none repeat scroll 0 0 #1c3849;
+        height: 60px;
+        width: 60px;
+        text-align: center;
+        line-height: 60px;
+        z-index: 50;
+        padding-top: 15px;
+    }
+    .ar_layout .nav-text {
+        left: 0 !important;
+    }
+   
   .mobile-nav-right .top-nav {
     left:100%;
     right:-100%;

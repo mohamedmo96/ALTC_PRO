@@ -20,7 +20,7 @@
 @if (dir == "ltr")
 {
 
-    <section id="about" class="about section-bg">
+    <section style="margin-top:62px" id="about" class="about section-bg">
         <div class="container" data-aos="fade-up">
 
             <div class="section-title">
@@ -28,13 +28,13 @@
 
             </div>
 
-            <div class=" d-flex; justify-content-right;" class="">
+            <div  class="  d-flex; justify-content-right;" >
 
-                <section id="about" class="about section-bg">
+                <section  id="about" class="about section-bg">
 
                     @foreach (var item in Model)
                     {
-                        <div class="container" data-aos="fade-up">
+                        <div  class="container" data-aos="fade-up">
                             @Html.Raw(item.aboutus)
                         </div>
 
@@ -118,7 +118,7 @@ else
 {
 
     <!-- ======= قسم حول ======= -->
-    <section id="about" class="about section-bg">
+    <section style="margin-top:62px" id="about" class="about section-bg">
         <div class="container" data-aos="fade-up">
 
             <div class="section-title">

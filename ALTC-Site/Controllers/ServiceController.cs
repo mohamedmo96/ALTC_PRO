@@ -14,7 +14,6 @@ namespace ALTC_Website.Controllers
             _serviceService = serviceService;
         }
 
-        // Display the create Servicet form
         public IActionResult Create()
         {
             return View();

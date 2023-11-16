@@ -31,13 +31,11 @@
     <None Include="Views\Complain\Index.cshtml" />
     <None Include="Views\Contact\Index.cshtml" />
     <None Include="Views\JobCandidate\Create.cshtml" />
-    <None Include="Views\Service\Create.cshtml" />
-    <None Include="Views\Service\Edit.cshtml" />
-    <None Include="Views\Service\Index.cshtml" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.0-rc.2.23509.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter" Version="8.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.0" />
     <PackageReference Include="MongoDB.Driver" Version="2.22.0" />
   </ItemGroup>
 
