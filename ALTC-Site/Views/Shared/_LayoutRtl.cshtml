@@ -1,12 +1,14 @@
 ﻿<!DOCTYPE html>
-<html lang="en-US">
+<html lang="ar-eg" >
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Minimalista - New Amazing HTML5 Template</title>
+    <title>ALTC</title>
     <link rel="stylesheet" href="~/css/components.css">
     <link rel="stylesheet" href="~/css/icons.css">
     <link rel="stylesheet" href="~/css/responsee.css">
+    <link rel="stylesheet" href="~/css/social_media_icons.css">
+
     <link rel="stylesheet" href="~/owl-carousel/owl.carousel.css">
     <link rel="stylesheet" href="~/owl-carousel/owl.theme.css">
     <link rel="stylesheet" href="~/css/lightcase.css">
@@ -16,14 +18,14 @@
     <link href="~/lib/bootstrap/dist/css/bootstrap.rtl.css" rel="stylesheet" />
     <link href="~/lib/bootstrap/dist/css/bootstrap.rtl.min.css" rel="stylesheet" />
     <!-- Favicons -->
-    <link href="~/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-    <link href="/img/altc-logo2.png" rel="apple-touch-icon">
+    <link href="~/assets/img/Capture.png" rel="icon">
+    <link href="~/assets/img/Capture.png" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
     <!-- Favicons -->
-    <link href="~/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-    <link href="/img/altc-logo2.png" rel="apple-touch-icon">
+    <link href="~/assets/img/Capture.png" rel="icon">
+    <link href="~/assets/img/Capture.png" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -53,31 +55,38 @@
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,400,600,900&subset=latin-ext" rel="stylesheet">
     <script type="text/javascript" src="~/js/jquery-1.8.3.min.js"></script>
     <script type="text/javascript" src="~/js/jquery-ui.min.js"></script>
-</head>
 
+</head>
+@{
+    string dir = "rtl";
+    string lang = "ar";
+}
 <body class="size-1140">
     <!-- PREMIUM FEATURES BUTTON -->
     <div id="page-wrapper">
         <!-- HEADER -->
-        <header role="banner" class="position-absolute margin-top-30 margin-m-top-0 margin-s-top-0">
+      
+        <header role="banner" class="position-absolute margin-m-top-0 margin-s-top-0">
             <!-- Top Navigation -->
-            <nav class="background-transparent background-transparent-hightlight full-width sticky" style="display: flex;align-items: center;">
+            <nav class="z-index:99999999; background-transparent background-transparent-hightlight full-width sticky     box-shadow: 0px 1px 4px whitesmoke;" style="display: flex; align-items: center; line-height: 80%;">
                 <div class="s-12 l-2">
                     <a href="" class="logo">
-                        <!-- Logo version before sticky nav -->
-                        <img class="logo-before" style="width:141px;" src="img/altc-logo2.png" alt="">
-                        <!-- Logo version after sticky nav -->
-                        <img class="logo-after" style="width:141px; margin-top:20px;" src="img/altc-logo2.png" alt="">
+                        <img style="width:43%" class="logo-before" src="~/assets/img/altc-logo2.png" alt="">
+                        <img style="width:43%" class="logo-after" src="~/assets/img/altc-logo2.png" alt="">
                     </a>
                 </div>
                 <div class="s-12 l-10">
                     <div class="top-nav right">
+                        <ul class="right chevron " style='margin-bottom:unset !important'>
 
-                        <ul class="right chevron">
-                            <li><a style=" color:red" class="nav-link scrollto" asp-area="Admin" asp-controller="Home" asp-action="">Dashboard</a></li>
-                            <li><a asp-action="index" asp-controller="Home">Home</a></li>
-                            <li><a asp-action="index" asp-controller="About">About Us</a></li>
-                            <li><a  asp-controller="Contact" asp-action="index">Contact</a></li>
+                             <li><a onclick="toggleLanguage()"  style="padding: 1.2rem 1rem !important;">English</a></li> 
+
+                            @* <li><a style=" color:red" class="nav-link scrollto" asp-area="Admin" asp-controller="Home" asp-action=""> لوحة التحكم </a></li> *@
+                         
+                            <li><a style="padding: 1.2rem 1rem !important;" href="@Url.Action("Index", "Home", new { dir = dir, lang = lang })">الرئيسية</a></li>
+                            <li><a style="padding: 1.2rem 1rem !important;" href="@Url.Action("Index", "About", new { dir = dir, lang = lang })">من نحن</a></li>
+                            <li><a style="padding: 1.2rem 1rem !important;" href="@Url.Action("Index", "Contact", new { dir = dir, lang = lang })">تواصل</a></li>
+
                         </ul>
                     </div>
                 </div>
@@ -87,37 +96,55 @@
         <!-- FOOTER -->
         <footer>
             <!-- Contact Us -->
-            <div class="background-dark padding text-center footer-social">
-                <a class="margin-right-10" target="_blank" href="https://www.facebook.com"><i class="icon-facebook_circle text-size-30"></i> <span class="text-strong text-white hide-s hide-m">FACEBOOK</span></a>
-                <a class="margin-right-10" target="_blank" href="https://www.twitter.com"><i class="icon-twitter_circle text-size-30"></i> <span class="text-strong text-white hide-s hide-m">TWITTER</span></a>
-                <a class="margin-right-10" target="_blank" href="https://www.instagram.com"><i class="icon-instagram_circle text-size-30"></i> <span class="text-strong text-white hide-s hide-m">INSTAGRAM</span></a>
-                <a target="_blank" href="https://www.linkedin.com"><i class="icon-linked_in_circle text-size-30"></i> <span class="text-strong text-white hide-s hide-m">LINKEDIN</span></a>
+      
+
+            <div class="social-icons background-dark">
+                <a class="social-icon twitter-icon" href="https://twitter.com/altctechinc">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                
+               
+                <a class="social-icon instagram-icon" href="https://instagram.com/altctechinc">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <a class="social-icon linkedin-icon" href="https://www.linkedin.com/company/arab.leading.technology.company.altc?_l=en_US">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a class="social-icon tiktok-icon" href="https://www.tiktok.com/@@altctechcom">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+
+                <a class="social-icon facebook-icon" href="https://www.facebook.com/altctechinc">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
             </div>
 
-            <!-- Main Footer -->
+
+            <!-- التذييل الرئيسي -->
             <section class="section-small-padding text-center background-dark full-width">
                 <div class="line">
                     <div class="margin">
-                        <!-- Collumn 1 -->
+                        <!-- العمود 1 -->
                         <div class="s-12 m-12 l-4 margin-m-bottom-30">
-                            <h3 class="text-size-16">Company Address</h3>
+                            <h3 class="text-size-16">عنوان الشركة</h3>
                             <p class="text-size-14">
-                                Responsive Street 7<br>
-                                London - United Kingdom<br>
-                                Europe
+                                 شارع المملكة  <br>
+                                لندن - المملكة المتحدة<br>
+                                أوروبا
                             </p>
                         </div>
-                        <!-- Collumn 2 -->
+                        <!-- العمود 2 -->
                         <div class="s-12 m-12 l-4 margin-m-bottom-30">
-                            <h3 class="text-size-16">E-mail</h3>
+                            <h3 class="text-size-16">البريد الإلكتروني</h3>
                             <p class="text-size-14">
                                 contact@sampledomain.com<br>
                                 office@sampledomain.com
                             </p>
                         </div>
-                        <!-- Collumn 3 -->
+                        <!-- العمود 3 -->
                         <div class="s-12 m-12 l-4 ">
-                            <h3 class="text-size-16">Phone Numbers</h3>
+                            <h3 class="text-size-16">أرقام الهواتف</h3>
                             <p class="text-size-14">
                                 0800 4521 800 50<br>
                                 0450 5896 625 16<br>
@@ -129,15 +156,40 @@
             </section>
             <hr class="break margin-top-bottom-0" style="border-color: rgba(0, 0, 0, 0.80);">
 
-            <!-- Bottom Footer -->
+            <!-- التذييل السفلي -->
             <section class="padding background-dark full-width">
                 <div class="text-center">
-                    <p class="text-size-12">Copyright 2023, Vision Design - graphic zoo</p>
-                    <p class="text-size-12">All images is purchased from Bigstock. Do not use the images in your website.</p>
+                    <p class="text-size-12">حقوق النشر 2023</p>
+                  
                 </div>
             </section>
         </footer>
+
     </div>
+    <script>
+        function toggleLanguage() {
+            var currentUrl = window.location.href;
+            var newUrl;
+
+            if (currentUrl.includes("/ltr/en")) {
+                // Switch to RTL and Arabic
+                newUrl = currentUrl.replace("/ltr/en", "/rtl/ar");
+            }
+            else if (currentUrl.includes("/rtl/ar")) {
+                // Switch to LTR and English
+                newUrl = currentUrl.replace("/rtl/ar", "/ltr/en");
+            }
+            else {
+                // If neither /ltr/en nor /rtl/ar exists, append /ltr/en to the URL
+                newUrl = currentUrl + "Home/Index/ltr/en";
+            }
+
+            if (newUrl) {
+                // Navigate to the new URL
+                window.location.href = newUrl;
+            }
+        }
+    </script>
     <script type="text/javascript" src="~/js/responsee.js"></script>
     <script type="text/javascript" src="~/js/contact.js"></script>
 
@@ -158,6 +210,7 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://kit.fontawesome.com/1c2c2462bf.js" crossorigin="anonymous"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

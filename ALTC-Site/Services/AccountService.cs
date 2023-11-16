@@ -57,6 +57,9 @@ namespace ALTC_Site.Services
             
         }
 
-  
+        public Account GetByEmail(string email)
+        {
+          return  accountCollection.Find(a=>a.Email==email).FirstOrDefault(); 
+        }
     }
 }

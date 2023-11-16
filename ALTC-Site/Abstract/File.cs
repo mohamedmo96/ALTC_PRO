@@ -19,5 +19,16 @@ namespace ALTC_Website.Abstract
             }
             return fileName;
         }
+        public static bool ValidPhotoExtension(IFormFile img)
+        {
+            string[] extensions = { "png", "jpg" };
+            string extension = Path.GetExtension(img.FileName);
+            if (extensions.Contains(extension.ToLower()))
+            {
+                return true;
+            }
+            return false;
+
+        }
     }
 }

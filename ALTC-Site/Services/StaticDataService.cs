@@ -37,7 +37,11 @@ namespace ALTC_Website.Services
             StaticCollection.DeleteOne(filter);
         }
 
-       
+        public List<StaticData> GetBylang(string lang)
+        {
+            return StaticCollection.Find(s => s.lang == lang).ToList();
+        }
+
 
         public List<StaticData> GetAll()
         {

@@ -1,266 +1,528 @@
-﻿<section id="contact" class="contact" style="margin-top:70px;">
-	<div class="container" data-aos="fade-up">
+﻿@{
+	string dir = "ltr";
+	string lang = "en";
+	Layout = "~/Views/Shared/_LayoutLtr.cshtml";
+	if (ViewData["Dir"] != null & ViewData["Lang"] != null)
+	{
+		dir = ViewData["Dir"].ToString();
+		lang = ViewData["Lang"].ToString();
 
-		<div class="section-title">
-			<h3><span>Contact Us</span></h3>
-			<p>
-				LET'S WORK TOGETHER
-				We Love to Listen to Your Requirements.
-			</p>
+		if (dir == "rtl")
+		{
+			Layout = "~/Views/Shared/_LayoutRtl.cshtml";
+		}
+	}
+}
+
+
+
+<style>
+
+
+	#file-input {
+		display: none;
+	}
+
+	#file-input-label {
+		font-size: 1em;
+		padding: 7px 15px;
+		margin-botton: 10px;
+		border: 1px solid #DEE2E6;
+		border-radius: 6%;
+	}
+</style>
+@if (dir == "ltr")
+{
+	<section id="contact" class="contact" style="margin-top:70px;">
+		<div class="container" data-aos="fade-up">
+
+			<div class="section-title">
+				<h3><span>Contact Us</span></h3>
+				<p>
+					LET'S WORK TOGETHER
+					We Love to Listen to Your Requirements.
+				</p>
+			</div>
+
+
+
+
 		</div>
+	</section>
+
+	<!-- End Contact Section -->
+	<main role="main">
+		<!-- Content -->
+		<article>
+
+			<div class="container">
 
 
-	
+				<div style="z-index:1;" class="tab-wrap">
+					
 
-	</div>
-</section><!-- End Contact Section -->
-<main role="main">
-    <!-- Content -->
-    <article >
-       
-   <div class="container">
+					<input type="radio" id="tab4" name="tabGroup2" class="tab" checked>
+					<label style="text-align:center !important;" class="" for="tab4">Request a Quote</label>
 
+					<input type="radio" id="tab5" name="tabGroup2" class="tab">
+					<label style="text-align:center !important;" for="tab5">Technical Support</label>
 
-		<div class="tab-wrap">
-		
-			<input type="radio" id="tab4" name="tabGroup2" class="tab" checked>
-				<label class="" for="tab4">Request a Quote</label>
+					<input type="radio" id="tab6" name="tabGroup2" class="tab">
+					<label style="text-align:center !important;" for="tab6">Complains</label>
 
-			<input type="radio" id="tab5" name="tabGroup2" class="tab">
-			<label for="tab5">Technical Support</label>
+					<input type="radio" id="tab7" name="tabGroup2" class="tab">
+					<label style="text-align:center !important;" for="tab7">Job Candidate</label>
+                    
 
-			<input type="radio" id="tab6" name="tabGroup2" class="tab">
-			<label for="tab6">Complains</label>
-			
-			<input type="radio" id="tab7" name="tabGroup2" class="tab">
-			<label for="tab7">Job Candidate</label>
+					<div class="tab__content">
+						<div class="form-wrapper " id="form1" class="hidden">
+							@* <h2 >Request a Quote</h2> *@
+							@* 	<form>
+						<div class="form-group">
+						<div class="row">
+						<div class="col-12 col-md-6">
+						<!-- On small screens (sm and down), use 100% column width; on medium and larger screens (md and up), use 50% column width -->
+						<label for="exampleInputName">Name</label>
+						<input type="text" name="Name" class="form-control" id="Name" placeholder="Enter Name">
+						</div>
+						<div class="col-12 col-md-6">
+						<!-- On small screens (sm and down), use 100% column width; on medium and larger screens (md and up), use 50% column width -->
+						<label for "exampleInputEmail1">Email address</label>
+						<input type="email" name="Email" class="form-control" id="Email" aria-describedby="emailHelp" placeholder="Enter email">
+						</div>
+						</div>
+						</div>
 
-			<div class="tab__content">
-				<div class="form-wrapper " id="form1" class="hidden">
-					@* <h2 >Request a Quote</h2> *@
-			@* 	<form>
-							<div class="form-group">
-								<div class="row">
-									<div class="col-12 col-md-6">
-										<!-- On small screens (sm and down), use 100% column width; on medium and larger screens (md and up), use 50% column width -->
-										<label for="exampleInputName">Name</label>
-										<input type="text" name="Name" class="form-control" id="Name" placeholder="Enter Name">
-									</div>
-									<div class="col-12 col-md-6">
-										<!-- On small screens (sm and down), use 100% column width; on medium and larger screens (md and up), use 50% column width -->
-										<label for "exampleInputEmail1">Email address</label>
-										<input type="email" name="Email" class="form-control" id="Email" aria-describedby="emailHelp" placeholder="Enter email">
-									</div>
-								</div>
-							</div>
-
-					<div class="form-group">
+						<div class="form-group">
 						<label for="exampleInputPhone">Phone</label>
 						<input type="Phone" name="Phone" class="form-control" id="Phone" placeholder="Phone">
-					</div>
-					<div class="form-group">
+						</div>
+						<div class="form-group">
 						<label for="exampleInputPhone">Services</label>
 						<input type="text" name="Services" class="form-control" id="Services" placeholder="Phone">
-					</div>
-					<div class="form-group">
+						</div>
+						<div class="form-group">
 						<label for="exampleInputDetails">Details Request</label>
-								<textarea style="outline: none !important;border-color: none !important;" class="form-control" name="Details" id="Details" rows="4" placeholder="Details Request"></textarea>
-					</div>
-		 
-				    <div class="form-group">
+						<textarea style="outline: none !important;border-color: none !important;" class="form-control" name="Details" id="Details" rows="4" placeholder="Details Request"></textarea>
+						</div>
+
+						<div class="form-group">
 						<label for="exampleInputFile">File Upload</label>
 						<div class="file-input-container">
-							<label class="file-input-button" for="fileInput">Choose File</label>
-							<input type="file" class="file-input-hidden" id="fileInput">
+						<label class="file-input-button" for="fileInput">Choose File</label>
+						<input type="file" class="file-input-hidden" id="fileInput">
+						</div>
+						</div>
+
+						<button id="margin" type="submit" class="btn btn-primary">Submit</button>
+						</form> *@
 						</div>
 					</div>
-		 
-					<button id="margin" type="submit" class="btn btn-primary">Submit</button>
-				</form> *@
-			    </div>
-			</div>
 
-			<div class="tab__content">
-				<div class="form-wrapper" id="form2" class="hidden">
-					@* <h2>Technical Support</h2> *@
-<form asp-action="Create" asp-controller="TechnicalSupport" method="post" onsubmit="return validateForm()">
-    <div class="form-group">
-        <div class="row">
-            <div class="col-12 col-md-6">
-                <label for="exampleInputName">Name</label>
-                <input type="text" name="Name" class="form-control" id="Name" placeholder="Enter Name" required>
-            </div>
-            <div class="col-12 col-md-6">
-                <label for="exampleInputEmail1">Email address</label>
-                <input type="email" name="Email" class="form-control" id="Email" aria-describedby="emailHelp" placeholder="Enter email" required>
-            </div>
-        </div>
-    </div>
+					<div class="tab__content">
+						<div class="form-wrapper" id="form2" class="hidden">
+							@* <h2>Technical Support</h2> *@
+							<form asp-action="Create" asp-controller="TechnicalSupport" method="post">
 
-    <div class="form-group">
-        <label for="exampleInputPhone">Phone</label>
-        <input type="tel" name="Phone" class="form-control" id="Phone" placeholder="Phone" required>
-                                @Html.ValidationMessageFor(model => model.Phone)
+								<div class="form-group">
+									<div class="row">
+										<div class="col-12 col-md-6">
+											<!-- On small screens (sm and down), use 100% column width; on medium and larger screens (md and up), use 50% column width -->
+											<label for="exampleInputName">Name</label>
+											<input type="text" name="Name" class="form-control" id="Name" placeholder="Enter Name">
+										</div>
+										<div class="col-12 col-md-6">
+											<!-- On small screens (sm and down), use 100% column width; on medium and larger screens (md and up), use 50% column width -->
+											<label for "exampleInputEmail1">Email address</label>
+											<input type="email" name="Email" class="form-control" id="Email" aria-describedby="emailHelp" placeholder="Enter email">
+										</div>
+									</div>
+								</div>
 
-    </div>
-    <div class="form-group">
-        <label for="Services">Services</label>
-        <input type="text" name="Services" class="form-control" id="Services" placeholder="Services" required>
-    </div>
-    <div class="form-group">
-        <label for="Details">Details Request</label>
-        <textarea class="form-control" name="Details" id="Details" rows="4" placeholder="Details Request" required></textarea>
-    </div>
+								<div class="form-group">
+									<label for="exampleInputPhone">Phone</label>
+									<input type="Phone" name="Phone" class="form-control" id="Phone" placeholder="Phone">
+								</div>
+								<div class="form-group">
+									<label for="exampleInputPhone">Services</label>
+									<input type="text" name="Services" class="form-control" id="Services" placeholder="Services">
+								</div>
+								<div class="form-group">
+									<label for="exampleInputDetails">Details Request</label>
+									<textarea class="form-control" name="Details" id="Details" rows="4" placeholder="Details Request"></textarea>
+								</div>
 
-    <button onclick="save" id="margin" type="submit" class="btn btn-primary">Submit</button>
-</form>
+								@*  <div class="form-group">
+							<label for="exampleInputFile">File Upload</label>
+							<div class="file-input-container">
+							<label class="file-input-button" for="fileInput">Choose File</label>
+							<input type="file" class="file-input-hidden" id="fileInput">
+							</div>
+							</div> *@
 
-<script>
-   
-    function validateForm() {
-        var emailInput = document.getElementById("Email");
+								<button id="margin" type="submit" class="btn btn-primary">Submit</button>
+							</form>
+						</div>
+					</div>
 
-        if (!emailRegex.test(emailInput.value)) {
-            alert("Please enter a valid email address.");
-            return false;
-        }
+					<div class="tab__content">
+						<div class="form-wrapper" id="form3" class="hidden">
+							@* <h2>Complain</h2> *@
+							<form asp-action="Create" asp-controller="Complain" method="post">
+								<div class="form-group">
+									<div class="row">
+										<div class="col-12 col-md-6">
+											<!-- On small screens (sm and down), use 100% column width; on medium and larger screens (md and up), use 50% column width -->
+											<label for="exampleInputName">Name</label>
+											<input type="text" name="Name" class="form-control" id="Name" placeholder="Enter Name">
+										</div>
+										<div class="col-12 col-md-6">
+											<!-- On small screens (sm and down), use 100% column width; on medium and larger screens (md and up), use 50% column width -->
+											<label for "exampleInputEmail1">Email address</label>
+											<input type="email" name="Email" class="form-control" id="Email" aria-describedby="emailHelp" placeholder="Enter email">
+										</div>
+									</div>
+								</div>
 
-        // You can add more custom validation here if needed
+								<div class="form-group">
+									<label for="exampleInputPhone">Phone</label>
+									<input type="Phone" name="Phone" class="form-control" id="exampleInputPhone" placeholder="Phone">
+								</div>
+								<div class="form-group">
+									<label for="exampleInputDetails">Details Of Complain</label>
+									<textarea class="form-control" name="Details" id="exampleInputDetails" rows="4" placeholder="Details of Complain"></textarea>
+								</div>
+								<div class="form-group">
+									<label for="exampleInputDetails">Type Of Complain</label>
+									<textarea class="form-control" name="TypeOfComplain" id="exampleInputDetails" rows="4" placeholder="Details of Complain"></textarea>
+								</div>
 
-        return true; // Return true to submit the form, or false to prevent submission
-    }
-</script>
+								<button id="margin" type="submit" class="btn btn-primary">Submit</button>
+							</form>
+						</div>
+
+					</div>
+
+					<div class="tab__content">
+						<div class="form-wrapper" id="form4" class="hidden">
+							@* <h2>Job Candidate</h2> *@
+							<form asp-action="Create" asp-controller="JobCandidate" method="post" enctype="multipart/form-data">
+								<div class="form-group">
+									<div class="row">
+										<div class="col-12 col-md-6">
+											<!-- On small screens (sm and down), use 100% column width; on medium and larger screens (md and up), use 50% column width -->
+											<label for="exampleInputName">Name</label>
+											<input type="text" name="Name" class="form-control" id="Name" placeholder="Enter Name">
+										</div>
+										<div class="col-12 col-md-6">
+											<!-- On small screens (sm and down), use 100% column width; on medium and larger screens (md and up), use 50% column width -->
+											<label for "exampleInputEmail1">Email address</label>
+											<input type="email" name="Email" class="form-control" id="Email" aria-describedby="emailHelp" placeholder="Enter email">
+										</div>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label for="exampleInputPhone">Phone</label>
+									<input type="Phone" name="Phone" class="form-control" id="Phone" placeholder="Phone">
+								</div>
+								<div class="form-group">
+									<label for="exampleInputDetails">JobTitile</label>
+									<input class="form-control" name="JobTitile" id="JobTitile" rows="4" placeholder="JobTitile">
+								</div>
+								<div class="form-group">
+									<label for="exampleInputPhone">Message</label>
+									<input type="text" name="Message" class="form-control" id="Message" placeholder="Message">
+								</div>
+
+								<div class="form-group">
+									<input type="file" name="File" class="form-control" id="File">
+
+								</div>
+
+								@*  <div class="form-group">
+							<label for="exampleInputFile">File Upload</label>
+							<div class="file-input-container">
+							<label class="file-input-button" for="fileInput">Choose File</label>
+							<input type="file" class="file-input-hidden" id="fileInput">
+							</div>
+							</div> *@
+
+								<button id="margin" type="submit" class="btn btn-primary">Submit</button>
+							</form>
+						</div>
+					</div>
 				</div>
+
 			</div>
 
-			<div class="tab__content">
-				<div class="form-wrapper" id="form3" class="hidden">
-					@* <h2>Complain</h2> *@
-<form asp-action="Create" asp-controller="Complain" method="post" onsubmit="return validateForm()">
-    <div class="form-group">
-        <div class="row">
-            <div class="col-12 col-md-6">
-                <label for="Name">Name</label>
-                <input type="text" name="Name" class="form-control" id="Name" placeholder="Enter Name" required>
-            </div>
-            <div class="col-12 col-md-6">
-                <label for="Email">Email address</label>
-                <input type="email" name="Email" class="form-control" id="Email" aria-describedby="emailHelp" placeholder="Enter email" required>
-            </div>
-        </div>
-    </div>
 
-    <div class="form-group">
-        <label for="exampleInputPhone">Phone</label>
-        <input type="tel" name="Phone" class="form-control" id="exampleInputPhone" placeholder="Phone" required>
-    </div>
-    <div class="form-group">
-        <label for="Details">Details Of Complain</label>
-        <textarea class="form-control" name="Details" id="Details" rows="4" placeholder="Details of Complain" required></textarea>
-    </div>
-    <div class="form-group">
-        <label for="TypeOfComplain">Type Of Complain</label>
-        <textarea class="form-control" name="TypeOfComplain" id="TypeOfComplain" rows="4" placeholder="Type of Complain" required></textarea>
-    </div>
+		</article>
+	</main>
 
-    <button id="margin" type="submit" class="btn btn-primary">Submit</button>
-</form>
-
-<script>
-    function validateForm() {
-        // You can add more custom validation here using JavaScript
-        // For example, checking if the email is in a valid format
-        var emailInput = document.getElementById("Email");
-        if (!emailRegex.test(emailInput.value)) {
-            alert("Please enter a valid email address.");
-            return false;
-        }
-
-        // Add more validation as needed
-
-        return true; // Return true to submit the form, or false to prevent submission
-    }
-</script>
-				</div>
-				
-			</div>
-			
-			<div class="tab__content">
-				<div class="form-wrapper" id="form4" class="hidden">
-					@* <h2>Job Candidate</h2> *@
-<form asp-action="Create" asp-controller="JobCandidate" method="post" enctype="multipart/form-data" onsubmit="return validateForm()">
-    <div class="form-group">
-        <div class="row">
-            <div class="col-12 col-md-6">
-                <label for="Name">Name</label>
-                <input type="text" name="Name" class="form-control" id="Name" placeholder="Enter Name" required>
-            </div>
-            <div class="col-12 col-md-6">
-                <label for="Email">Email address</label>
-                <input type="email" name="Email" class="form-control" id="Email" aria-describedby="emailHelp" placeholder="Enter email" required>
-            </div>
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label for="Phone">Phone</label>
-        <input type="tel" name="Phone" class="form-control" id="Phone" placeholder="Phone" required>
-    </div>
-    <div class="form-group">
-        <label for="JobTitile">JobTitile</label>
-        <input class="form-control" name="JobTitile" id="JobTitile" rows="4" placeholder="JobTitile" required>
-    </div>
-    <div class="form-group">
-        <label for="Message">Message</label>
-        <input type="text" name="Message" class="form-control" id="Message" placeholder="Message" required>
-    </div>
-
-    <div class="form-group">
-        <label for="File">File Upload</label>
-        <input type="file" name="File" class="form-control" id="File" required>
-    </div>
-
-    <button id="margin" type="submit" class="btn btn-primary">Submit</button>
-</form>
-
-<script>
-    function validateForm() {
-        // You can add more custom validation here using JavaScript
-        // For example, checking if the email is in a valid format
-        var emailInput = document.getElementById("Email");
-        if (!emailRegex.test(emailInput.value)) {
-            alert("Please enter a valid email address.");
-            return false;
-        }
-
-        // Add more validation as needed
-
-        return true; // Return true to submit the form, or false to prevent submission
-    }
-</script>
-				</div>
-			</div>
-		</div>
-				
+	<!-- FOOTER -->
+	<div id="space">
 	</div>
-		
-
-    </article>
-</main>
+	<div style="margin:100px;"></div>
+}
 
 
-<!-- FOOTER -->
-<div id="space">
-</div>
-<div style="margin:100px;"></div>
+else
+{
+	<div class="arabic-form-content">
+	<section id="contact" class="contact" style="margin-top:70px;">
+		<div class="container" data-aos="fade-up">
+
+			<div class="section-title">
+				<h3><span>اتصل بنا</span></h3>
+				<p>
+					دعونا نعمل معًا
+					نحن نحب أن نستمع إلى متطلباتك
+				</p>
+			</div>
+
+
+
+
+		</div>
+	</section>
+
+	<!-- End Contact Section -->
+	<main role="main">
+		<!-- Content -->
+		<article>
+
+			<div class="container">
+
+
+				<div style="z-index:1;" class="tab-wrap">
+
+
+
+					<input type="radio" id="tab4" name="tabGroup2" class="tab" checked>
+					<label class="tab-label" for="tab4">اطلب اقتباس</label>
+
+					<input type="radio" id="tab5" name="tabGroup2" class="tab">
+						<label class="tab-label" for="tab5">دعم فني</label>
+
+					<input type="radio" id="tab6" name="tabGroup2" class="tab">
+						<label class="tab-label" for="tab6">الشكاوى</label>
+
+					<input type="radio" id="tab7" name="tabGroup2" class="tab">
+						<label class="tab-label" for="tab7">مرشح لوظيفة</label>
+					
+					
+
+
+					<div class="tab__content">
+						<div class="form-wrapper " id="form1" class="hidden">
+							@* <h2 >Request a Quote</h2> *@
+							@* 	<form>
+						<div class="form-group">
+						<div class="row">
+						<div class="col-12 col-md-6">
+						<!-- On small screens (sm and down), use 100% column width; on medium and larger screens (md and up), use 50% column width -->
+						<label for="exampleInputName">Name</label>
+						<input type="text" name="Name" class="form-control" id="Name" placeholder="Enter Name">
+						</div>
+						<div class="col-12 col-md-6">
+						<!-- On small screens (sm and down), use 100% column width; on medium and larger screens (md and up), use 50% column width -->
+						<label for "exampleInputEmail1">Email address</label>
+						<input type="email" name="Email" class="form-control" id="Email" aria-describedby="emailHelp" placeholder="Enter email">
+						</div>
+						</div>
+						</div>
+
+						<div class="form-group">
+						<label for="exampleInputPhone">Phone</label>
+						<input type="Phone" name="Phone" class="form-control" id="Phone" placeholder="Phone">
+						</div>
+						<div class="form-group">
+						<label for="exampleInputPhone">Services</label>
+						<input type="text" name="Services" class="form-control" id="Services" placeholder="Phone">
+						</div>
+						<div class="form-group">
+						<label for="exampleInputDetails">Details Request</label>
+						<textarea style="outline: none !important;border-color: none !important;" class="form-control" name="Details" id="Details" rows="4" placeholder="Details Request"></textarea>
+						</div>
+
+						<div class="form-group">
+						<label for="exampleInputFile">File Upload</label>
+						<div class="file-input-container">
+						<label class="file-input-button" for="fileInput">Choose File</label>
+						<input type="file" class="file-input-hidden" id="fileInput">
+						</div>
+						</div>
+
+						<button id="margin" type="submit" class="btn btn-primary">Submit</button>
+						</form> *@
+						</div>
+					</div>
+
+						<div class="tab__content">
+							<div class="form-wrapper" id="form2" class="hidden">
+								@* <h2>Technical Support</h2> *@
+								<form asp-action="Create" asp-controller="TechnicalSupport" method="post">
+
+									<div class="form-group">
+										<div class="row">
+											<div class="col-12 col-md-6">
+												<label for="exampleInputName" class="text-right" dir="rtl">الاسم</label>
+												<input type="text" name="Name" class="form-control text-right" id="Name"   >
+											</div>
+											<div class="col-12 col-md-6">
+												<label for="exampleInputEmail1" class="text-right" dir="rtl">عنوان البريد الإلكتروني</label>
+												<input type="email" name="Email" class="form-control text-right" id="Email" aria-describedby="emailHelp">
+											</div>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label for="exampleInputPhone" class="text-right" dir="rtl">الهاتف</label>
+										<input type="Phone" name="Phone" class="form-control text-right" id="Phone"   >
+									</div>
+									<div class="form-group">
+										<label for="exampleInputPhone" class="text-right" dir="rtl">الخدمات</label>
+										<input type="text" name="Services" class="form-control text-right" id="Services" >
+									</div>
+									<div class="form-group">
+										<label for="exampleInputDetails" class="text-right" dir="rtl">تفاصيل الطلب</label>
+										<textarea class="form-control text-right" name="Details" id="Details" rows="4"    "></textarea>
+									</div>
+
+									@*  <div class="form-group">
+								<label for="exampleInputFile">File Upload</label>
+								<div class="file-input-container">
+								<label class="file-input-button" for="fileInput">Choose File</label>
+								<input type="file" class="file-input-hidden" id="fileInput">
+								</div>
+								</div> *@
+
+									<button id="margin" type="submit" class="btn btn-primary">إرسال</button>
+								</form>
+							</div>
+						</div>
+
+
+						<div class="tab__content">
+							<div class="form-wrapper" id="form3" class="hidden">
+								@* <h2>Complain</h2> *@
+								<form asp-action="Create" asp-controller="Complain" method="post">
+									<div class="form-group">
+										<div class="row">
+											<div class="col-12 col-md-6">
+												<label for="exampleInputName" class="text-right" dir="rtl">الاسم</label>
+												<input type="text" name="Name" class="form-control text-right" id="Name">
+											</div>
+											<div class="col-12 col-md-6">
+												<label for="exampleInputEmail1" class="text-right" dir="rtl">عنوان البريد الإلكتروني</label>
+												<input type="email" name="Email" class="form-control text-right" id="Email" aria-describedby="emailHelp ">
+											</div>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label for="exampleInputPhone" class="text-right" dir="rtl">الهاتف</label>
+										<input type="Phone" name="Phone" class="form-control text-right" id="exampleInputPhone">
+									</div>
+									<div class="form-group">
+										<label for="exampleInputDetails" class="text-right" dir="rtl">تفاصيل الشكوى</label>
+										<textarea class="form-control text-right" name="Details" id="exampleInputDetails" rows="4 "></textarea>
+									</div>
+									<div class="form-group">
+										<label for="exampleInputDetails" class="text-right" dir="rtl">نوع الشكوى</label>
+										<textarea class="form-control text-right" name="TypeOfComplain" id="exampleInputDetails" rows="4" "></textarea>
+									</div>
+
+									<button id="margin" type="submit" class="btn btn-primary">إرسال</button>
+								</form>
+							</div>
+						</div>
+
+
+					<div class="tab__content">
+						<div class="form-wrapper" id="form4" class="hidden">
+							@* <h2>Job Candidate</h2> *@
+							<form asp-action="Create" asp-controller="JobCandidate" method="post" enctype="multipart/form-data">
+								<div class="form-group">
+									<div class="row">
+										<div class="col-12 col-md-6">
+											<label for="exampleInputName" class="text-right" dir="rtl">الاسم</label>
+											<input type="text" name="Name" class="form-control text-right" id="Name"  ">
+										</div>
+										<div class="col-12 col-md-6">
+											<label for="exampleInputEmail1" class="text-right" dir="rtl">عنوان البريد الإلكتروني</label>
+											<input type="email" name="Email" class="form-control text-right" id="Email" aria-describedby="emailHelp ">
+										</div>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label for="exampleInputPhone" class="text-right" dir="rtl">الهاتف</label>
+									<input type="Phone" name="Phone" class="form-control text-right" id="Phone"  ">
+								</div>
+								<div class="form-group">
+									<label for="exampleInputDetails" class="text-right" dir="rtl">عنوان الوظيفة</label>
+									<input class="form-control text-right" name="JobTitile" id="JobTitile" rows="4 ">
+								</div>
+								<div class="form-group">
+									<label for="exampleInputPhone" class="text-right" dir="rtl">الرسالة</label>
+									<input type="text" name="Message" class="form-control text-right" id="Message">
+								</div>
+
+								<div style="margin-botton:10px;" class="form-group">
+										<label class="text-right control-lable" dir="rtl">الملف</label>
+									<label  id="file-input-label" for="File" class="text-right" dir="rtl">تحميل </label>
+										<input style="display:none" dir="rtl type="file" name="File" class="form-control text-right" id="File">
+								</div>
+									@* <div class="form-group">
+
+										<label id="file-input-label" style=" display: flex !important ; justify-content: end;" asp-for="File" class="control-label">اختار الملف</label>
+										<input style="display:none" name="اختار الملف" palceholder="اختار الملف" dir="rtl" asp-for="File" class="form-control" />
+
+										<span dir="rtl" asp-validation-for="File" class="text-danger"></span>
+									</div *@
+
+								@* <div class="form-group">
+							<label for="exampleInputFile">File Upload</label>
+							<div class="file-input-container">
+							<label class="file-input-button" for="fileInput">Choose File</label>
+							<input type="file" class="file-input-hidden" id="fileInput">
+							</div>
+							</div> *@
+
+								<button style="margin-top:20px;"n id="margin" type="submit" class="btn btn-primary">إرسال</button>
+							</form>
+						</div>
+					</div>
+
+
+				</div>
+
+			</div>
+
+
+		</article>
+	</main>
+
+	<!-- FOOTER -->
+	<div id="space">
+	</div>
+	<div style="margin:100px;"></div>
+	</div>
+}
+
+}
+
 <partial name="_ValidationScriptsPartial" />
 
 <script>
 	function GetRequestForm() {
+		let lang = '@lang';
 		$.ajax(
 			{
-				url: "/Request/Create",
-				
+				url: "/Request/Create/",
+				data: { lang: lang },
 				success: function (result) {
 				
 					document.getElementById("form1").innerHTML = result;

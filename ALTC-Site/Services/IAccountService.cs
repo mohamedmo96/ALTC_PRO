@@ -8,6 +8,7 @@ namespace ALTC_Site.Services
         Account Get(string email, string password);
         List<Account> GetAll();
         public Account GetById(string id);
+        public Account GetByEmail(string email);
         void Delete(string id);
         void Add(Account account);
     }

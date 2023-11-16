@@ -15,11 +15,15 @@ namespace ALTC_WebSite.Controllers
             this.department = department;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(string dir, string lang)
         {
-            string lang = "en"; // قم بتحديد اللغة المطلوبة
+            // Store in ViewData to pass to View
+            ViewData["Dir"] = dir;
+            ViewData["Lang"] = lang;
 
+            // Get data based on the selected language
             var model = department.GetBylang(lang);
+
             return View(model);
         }
 

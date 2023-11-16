@@ -1,9 +1,9 @@
 ﻿<!DOCTYPE html>
-<html lang="en-US">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Minimalista - New Amazing HTML5 Template</title>
+    <title>ALTC</title>
     <link rel="stylesheet" href="~/css/components.css">
     <link rel="stylesheet" href="~/css/icons.css">
     <link rel="stylesheet" href="~/css/responsee.css">
@@ -18,14 +18,14 @@
     <link href="~/lib/bootstrap/dist/css/bootstrap.rtl.css" rel="stylesheet" />
     <link href="~/lib/bootstrap/dist/css/bootstrap.rtl.min.css" rel="stylesheet" />
     <!-- Favicons -->
-    <link href="~/assets/img/favicon.png" rel="icon">
-    <link href="~/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="~/assets/img/Capture.png" rel="icon">
+    <link href="~/assets/img/Capture.png" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
     <!-- Favicons -->
-    <link href="~/assets/img/favicon.png" rel="icon">
-    <link href="~/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="~/assets/img/Capture.png" rel="icon">
+    <link href="~/assets/img/Capture.png" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -57,36 +57,44 @@
     <script type="text/javascript" src="~/js/jquery-ui.min.js"></script>
 
 </head>
-
+@{
+    string dir = "ltr";
+    string lang = "en";
+   
+}
 <body class="size-1140">
     <!-- PREMIUM FEATURES BUTTON -->
     <div id="page-wrapper">
         <!-- HEADER -->
-        <header role="banner" class="position-absolute margin-top-30 margin-m-top-0 margin-s-top-0">
+        <header  role="banner" class="position-absolute margin-m-top-0 margin-s-top-0">
             <!-- Top Navigation -->
-            <nav id="nav" class="background-transparent background-transparent-hightlight full-width sticky padding-top-15 ">
+            <nav class="background-transparent background-transparent-hightlight full-width sticky     box-shadow: 0px 1px 4px whitesmoke;" style="display: flex; align-items: center; line-height: 80%;">
+                <div class="s-12 l-2">
+                    <a href="" class="logo">
+                        <img style="width:43%" class="logo-before" src="~/assets/img/altc-logo2.png" alt="">
+                        <img style="width:43%" class="logo-after" src="~/assets/img/altc-logo2.png" alt="">
+                    </a>
+                </div>
                 <div class="s-12 l-10">
                     <div class="top-nav right">
+                        <ul class="right chevron " style='margin-bottom:unset !important'>
+                           
+                            <li><a onclick="toggleLanguage()" style="padding: 1.2rem 1rem !important;">العربية</a></li>
 
-                        <ul class="right chevron">
-                            <li><a style=" color:red" class="nav-link scrollto" asp-area="Admin" asp-controller="Home" asp-action="">Dashboard</a></li>
-                            <li><a asp-action="index" asp-controller="Home">Home</a></li>
-                            <li><a asp-action="index" asp-controller="About">About Us</a></li>
-                            <li><a asp-controller="Contact" asp-action="index">Contact</a></li>
+
+                            @* <li><a style="color:red; padding: 1.2rem 1rem !important;" class="nav-link scrollto" asp-area="Admin" asp-controller="Home" asp-action="">Dashboard</a></li> *@
+                            <li><a style="padding: 1.2rem 1rem !important;" href="@Url.Action("Index", "Home", new { dir = dir, lang = lang })">Home</a></li>
+                            <li><a style="padding: 1.2rem 1rem !important;" href="@Url.Action("Index", "About", new { dir = dir, lang = lang })">About Us</a></li>
+                            <li><a style="padding: 1.2rem 1rem !important;" href="@Url.Action("Index", "Contact", new { dir = dir, lang = lang })">Contact</a></li>
+                           
                         </ul>
                     </div>
                 </div>
-                <div class="s-12 l-2">
-                    <a href="index.html" class="logo">
-                        <!-- Logo version before sticky nav -->
-                        <img class="logo-before" src="img/logo-dark.png" alt="">
-                        <!-- Logo version after sticky nav -->
-                        <img class="logo-after" src="img/logo-dark.png" alt="">
-                    </a>
-                </div>
-            
             </nav>
         </header>
+
+
+
         @RenderBody()
         <!-- FOOTER -->
         <footer>
@@ -148,60 +156,27 @@
                 
                 </div> *@
 
-
             <div class="social-icons background-dark">
-               @*  <a class="social-icon twitter" href="#">
-                    <i class="fab fa-twitter"></i>
-                </a> *@
-                <a class="social-icon facebook" href="#">
-                    <i class="fab fa-facebook"></i>
-                </a>
-
-                <a class="social-icon twitter" href="#">
+                <a class="social-icon twitter-icon" href="https://twitter.com/altctechinc">
                     <i class="fab fa-twitter"></i>
                 </a>
 
-                <a class="social-icon instagram" href="#">
+
+                <a class="social-icon instagram-icon" href="https://instagram.com/altctechinc">
                     <i class="fab fa-instagram"></i>
                 </a>
 
-                <a class="social-icon linkedin" href="#">
+                <a class="social-icon linkedin-icon" href="https://www.linkedin.com/company/arab.leading.technology.company.altc?_l=en_US">
                     <i class="fab fa-linkedin"></i>
                 </a>
-
-
-                <a class="social-icon tiktok" href="#">
+                <a class="social-icon tiktok-icon" href="https://www.tiktok.com/@@altctechcom">
                     <i class="fab fa-tiktok"></i>
                 </a>
 
-                @* <a class="social-icon facebook" href="#">
-                    <i class="fab fa-facebook"></i>
+                <a class="social-icon facebook-icon" href="https://www.facebook.com/altctechinc">
+                    <i class="fab fa-facebook-f"></i>
                 </a>
-                <a class="social-icon instagram" href="#">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a class="social-icon github" href="#">
-                    <i class="fab fa-tiktok"></i>
-                </a> *@
             </div>
-
-
-
-            @* test *@
-
-
-@* <ul class="social-networks bounce">
-  <li><a href="https://www.linkedin.com/" class="icon-linkedin">LinkedIn</a></li>
-  <li><a href="https://twitter.com/" class="icon-twitter">Twitter</a></li>
-  <li><a href="https://www.facebook.com/" class="icon-facebook">Facebook</a></li>
-  <li><a href="https://twitch.tv" class="icon-twitch">Twitch</a></li>
-  <li><a href="https://github.com" class="icon-github">GitHub</a></li>
-  <li><a href="https://pinterest.com" class="icon-pinterest">Pinterest</a></li>
-  <li><a href="https://instagram.com" class="icon-instagram">Instagram</a></li>
-  <li><a href="https://vimeo.com" class="icon-vimeo">Vimeo</a></li>
-</ul> *@
-
-            @* test *@
 
             <!-- Main Footer -->
             <section class="section-small-padding text-center background-dark full-width">
@@ -241,12 +216,38 @@
             <!-- Bottom Footer -->
             <section class="padding background-dark full-width">
                 <div class="text-center">
-                    <p class="text-size-12">Copyright 2019, Vision Design - graphic zoo</p>
-                    <p class="text-size-12">All images is purchased from Bigstock. Do not use the images in your website.</p>
+                    <p class="text-size-12">Copyright 2023, ALTC </p>
+             
                 </div>
             </section>
         </footer>
     </div>
+
+
+    <script>
+        function toggleLanguage() {
+            var currentUrl = window.location.href;
+            var newUrl;
+
+            if (currentUrl.includes("/ltr/en")) {
+                // Switch to RTL and Arabic
+                newUrl = currentUrl.replace("/ltr/en", "/rtl/ar");
+            }
+            else if (currentUrl.includes("/rtl/ar")) {
+                // Switch to LTR and English
+                newUrl = currentUrl.replace("/rtl/ar", "/ltr/en");
+            }
+            else {
+                // If neither /ltr/en nor /rtl/ar exists, append /ltr/en to the URL
+                newUrl = currentUrl + "Home/Index/rtl/ar";
+            }
+
+            if (newUrl) {
+                // Navigate to the new URL
+                window.location.href = newUrl;
+            }
+        }
+    </script>
     <script type="text/javascript" src="~/js/responsee.js"></script>
     <script type="text/javascript" src="~/js/contact.js"></script>
 

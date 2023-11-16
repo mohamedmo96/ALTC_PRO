@@ -9,6 +9,7 @@ namespace ALTC_Site.Services
 
         Team GetById(string id);
         List<Team> GetAll();
+        List<Team>GetAllByLang(string lang);
 
         void DeleteById(string id);
 
