@@ -129,27 +129,27 @@
 										<div class="col-12 col-md-6">
 											<!-- On small screens (sm and down), use 100% column width; on medium and larger screens (md and up), use 50% column width -->
 											<label for="exampleInputName">Name</label>
-											<input type="text" name="Name" class="form-control" id="Name" placeholder="Enter Name">
+											<input type="text" name="Name" class="form-control" id="Name" placeholder="Enter Name" required>
 										</div>
 										<div class="col-12 col-md-6">
 											<!-- On small screens (sm and down), use 100% column width; on medium and larger screens (md and up), use 50% column width -->
 											<label for "exampleInputEmail1">Email address</label>
-											<input type="email" name="Email" class="form-control" id="Email" aria-describedby="emailHelp" placeholder="Enter email">
+											<input type="email" name="Email" class="form-control" required id="Email" aria-describedby="emailHelp" placeholder="Enter email">
 										</div>
 									</div>
 								</div>
 
 								<div class="form-group">
 									<label for="exampleInputPhone">Phone</label>
-									<input type="Phone" name="Phone" class="form-control" id="Phone" placeholder="Phone">
+									<input type="Phone" name="Phone" required class="form-control" id="Phone" placeholder="Phone">
 								</div>
 								<div class="form-group">
 									<label for="exampleInputPhone">Services</label>
-									<input type="text" name="Services" class="form-control" id="Services" placeholder="Services">
+									<input type="text" name="Services" required class="form-control" id="Services" placeholder="Services">
 								</div>
 								<div class="form-group">
 									<label for="exampleInputDetails">Details Request</label>
-									<textarea class="form-control" name="Details" id="Details" rows="4" placeholder="Details Request"></textarea>
+									<textarea class="form-control" required name="Details" id="Details" rows="4" placeholder="Details Request"></textarea>
 								</div>
 
 								@*  <div class="form-group">
@@ -174,19 +174,19 @@
 										<div class="col-12 col-md-6">
 											<!-- On small screens (sm and down), use 100% column width; on medium and larger screens (md and up), use 50% column width -->
 											<label for="exampleInputName">Name</label>
-											<input type="text" name="Name" class="form-control" id="Name" placeholder="Enter Name">
+											<input type="text" name="Name" required class="form-control" id="Name" placeholder="Enter Name">
 										</div>
 										<div class="col-12 col-md-6">
 											<!-- On small screens (sm and down), use 100% column width; on medium and larger screens (md and up), use 50% column width -->
 											<label for "exampleInputEmail1">Email address</label>
-											<input type="email" name="Email" class="form-control" id="Email" aria-describedby="emailHelp" placeholder="Enter email">
+											<input type="email" name="Email" required class="form-control" id="Email" aria-describedby="emailHelp" placeholder="Enter email">
 										</div>
 									</div>
 								</div>
 
 								<div class="form-group">
 									<label for="exampleInputPhone">Phone</label>
-									<input type="Phone" name="Phone" class="form-control" id="exampleInputPhone" placeholder="Phone">
+									<input type="Phone" name="Phone" required class="form-control" id="exampleInputPhone" placeholder="Phone">
 								</div>
 								<div class="form-group">
 									<label for="exampleInputDetails">Details Of Complain</label>
@@ -194,7 +194,7 @@
 								</div>
 								<div class="form-group">
 									<label for="exampleInputDetails">Type Of Complain</label>
-									<textarea class="form-control" name="TypeOfComplain" id="exampleInputDetails" rows="4" placeholder="Details of Complain"></textarea>
+									<textarea class="form-control" required name="TypeOfComplain" id="exampleInputDetails" rows="4" placeholder="Details of Complain"></textarea>
 								</div>
 
 								<button id="margin" type="submit" class="btn btn-primary">Submit</button>
@@ -212,31 +212,31 @@
 										<div class="col-12 col-md-6">
 											<!-- On small screens (sm and down), use 100% column width; on medium and larger screens (md and up), use 50% column width -->
 											<label for="exampleInputName">Name</label>
-											<input type="text" name="Name" class="form-control" id="Name" placeholder="Enter Name">
+											<input type="text" required name="Name" class="form-control" id="Name" placeholder="Enter Name">
 										</div>
 										<div class="col-12 col-md-6">
 											<!-- On small screens (sm and down), use 100% column width; on medium and larger screens (md and up), use 50% column width -->
 											<label for "exampleInputEmail1">Email address</label>
-											<input type="email" name="Email" class="form-control" id="Email" aria-describedby="emailHelp" placeholder="Enter email">
+											<input type="email" required name="Email" class="form-control" id="Email" aria-describedby="emailHelp" placeholder="Enter email">
 										</div>
 									</div>
 								</div>
 
 								<div class="form-group">
 									<label for="exampleInputPhone">Phone</label>
-									<input type="Phone" name="Phone" class="form-control" id="Phone" placeholder="Phone">
+									<input type="Phone" name="Phone" required class="form-control" id="Phone" placeholder="Phone">
 								</div>
 								<div class="form-group">
 									<label for="exampleInputDetails">JobTitile</label>
-									<input class="form-control" name="JobTitile" id="JobTitile" rows="4" placeholder="JobTitile">
+									<input class="form-control" required name="JobTitile" id="JobTitile" rows="4" placeholder="JobTitile">
 								</div>
 								<div class="form-group">
 									<label for="exampleInputPhone">Message</label>
-									<input type="text" name="Message" class="form-control" id="Message" placeholder="Message">
+									<input type="text" name="Message" required class="form-control" id="Message" placeholder="Message">
 								</div>
 
 								<div class="form-group">
-									<input type="file" name="File" class="form-control" id="File">
+									<input type="file" required name="File" class="form-control" id="File">
 
 								</div>
 
@@ -368,26 +368,26 @@ else
 										<div class="row">
 											<div class="col-12 col-md-6">
 												<label for="exampleInputName" class="text-right" dir="rtl">الاسم</label>
-												<input type="text" name="Name" class="form-control text-right" id="Name"   >
+												<input type="text" name="Name" required class="form-control text-right" id="Name">
 											</div>
 											<div class="col-12 col-md-6">
 												<label for="exampleInputEmail1" class="text-right" dir="rtl">عنوان البريد الإلكتروني</label>
-												<input type="email" name="Email" class="form-control text-right" id="Email" aria-describedby="emailHelp">
+												<input type="email" name="Email" required class="form-control text-right" id="Email" aria-describedby="emailHelp">
 											</div>
 										</div>
 									</div>
 
 									<div class="form-group">
 										<label for="exampleInputPhone" class="text-right" dir="rtl">الهاتف</label>
-										<input type="Phone" name="Phone" class="form-control text-right" id="Phone"   >
+										<input type="Phone" name="Phone" required class="form-control text-right" id="Phone">
 									</div>
 									<div class="form-group">
 										<label for="exampleInputPhone" class="text-right" dir="rtl">الخدمات</label>
-										<input type="text" name="Services" class="form-control text-right" id="Services" >
+										<input type="text" name="Services"  required class="form-control text-right" id="Services" >
 									</div>
 									<div class="form-group">
 										<label for="exampleInputDetails" class="text-right" dir="rtl">تفاصيل الطلب</label>
-										<textarea class="form-control text-right" name="Details" id="Details" rows="4"    "></textarea>
+										<textarea class="form-control  required text-right" name="Details" id="Details" rows="4" "></textarea>
 									</div>
 
 									@*  <div class="form-group">
@@ -412,26 +412,26 @@ else
 										<div class="row">
 											<div class="col-12 col-md-6">
 												<label for="exampleInputName" class="text-right" dir="rtl">الاسم</label>
-												<input type="text" name="Name" class="form-control text-right" id="Name">
+												<input type="text" required name="Name" class="form-control text-right" id="Name">
 											</div>
 											<div class="col-12 col-md-6">
 												<label for="exampleInputEmail1" class="text-right" dir="rtl">عنوان البريد الإلكتروني</label>
-												<input type="email" name="Email" class="form-control text-right" id="Email" aria-describedby="emailHelp ">
+												<input type="email" required name="Email" class="form-control text-right" id="Email" aria-describedby="emailHelp ">
 											</div>
 										</div>
 									</div>
 
 									<div class="form-group">
 										<label for="exampleInputPhone" class="text-right" dir="rtl">الهاتف</label>
-										<input type="Phone" name="Phone" class="form-control text-right" id="exampleInputPhone">
+										<input type="Phone" name="Phone" required class="form-control text-right" id="exampleInputPhone">
 									</div>
 									<div class="form-group">
 										<label for="exampleInputDetails" class="text-right" dir="rtl">تفاصيل الشكوى</label>
-										<textarea class="form-control text-right" name="Details" id="exampleInputDetails" rows="4 "></textarea>
+										<textarea class="form-control text-right" required name="Details" id="exampleInputDetails" rows="4 "></textarea>
 									</div>
 									<div class="form-group">
 										<label for="exampleInputDetails" class="text-right" dir="rtl">نوع الشكوى</label>
-										<textarea class="form-control text-right" name="TypeOfComplain" id="exampleInputDetails" rows="4" "></textarea>
+										<textarea  required class="form-control  text-right" name="TypeOfComplain" id="exampleInputDetails" rows="4" "></textarea>
 									</div>
 
 									<button id="margin" type="submit" class="btn btn-primary">إرسال</button>
@@ -448,32 +448,32 @@ else
 									<div class="row">
 										<div class="col-12 col-md-6">
 											<label for="exampleInputName" class="text-right" dir="rtl">الاسم</label>
-											<input type="text" name="Name" class="form-control text-right" id="Name"  ">
+												<input type="text" name="Name" required class="form-control text-right" id="Name" ">
 										</div>
 										<div class="col-12 col-md-6">
 											<label for="exampleInputEmail1" class="text-right" dir="rtl">عنوان البريد الإلكتروني</label>
-											<input type="email" name="Email" class="form-control text-right" id="Email" aria-describedby="emailHelp ">
+												<input type="email" name="Email" required class="form-control text-right" id="Email" aria-describedby="emailHelp ">
 										</div>
 									</div>
 								</div>
 
 								<div class="form-group">
 									<label for="exampleInputPhone" class="text-right" dir="rtl">الهاتف</label>
-									<input type="Phone" name="Phone" class="form-control text-right" id="Phone"  ">
+										<input type="Phone" name="Phone" required class="form-control text-right" id="Phone" ">
 								</div>
 								<div class="form-group">
 									<label for="exampleInputDetails" class="text-right" dir="rtl">عنوان الوظيفة</label>
-									<input class="form-control text-right" name="JobTitile" id="JobTitile" rows="4 ">
+										<input class="form-control text-right" required name="JobTitile" id="JobTitile" rows="4 ">
 								</div>
 								<div class="form-group">
 									<label for="exampleInputPhone" class="text-right" dir="rtl">الرسالة</label>
-									<input type="text" name="Message" class="form-control text-right" id="Message">
+										<input type="text" name="Message" required class="form-control text-right" id="Message">
 								</div>
 
 								<div style="margin-botton:10px;" class="form-group">
 										<label class="text-right control-lable" dir="rtl">الملف</label>
 									<label  id="file-input-label" for="File" class="text-right" dir="rtl">تحميل </label>
-										<input style="display:none" dir="rtl type="file" name="File" class="form-control text-right" id="File">
+										<input style="display:none" required dir="rtl type="file" name="File" class="form-control text-right" id="File">
 								</div>
 									@* <div class="form-group">
 

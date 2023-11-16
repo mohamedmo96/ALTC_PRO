@@ -79,13 +79,13 @@
                     <div class="top-nav right">
                         <ul class="right chevron " style='margin-bottom:unset !important'>
 
-                             <li><a onclick="toggleLanguage()"  style="padding: 1.2rem 1rem !important;">English</a></li> 
+                             <li><a  onclick="toggleLanguage()"  style="padding: 1.2rem 1rem !important; ">English</a></li> 
 
                             @* <li><a style=" color:red" class="nav-link scrollto" asp-area="Admin" asp-controller="Home" asp-action=""> لوحة التحكم </a></li> *@
                          
                             <li><a style="padding: 1.2rem 1rem !important;" href="@Url.Action("Index", "Home", new { dir = dir, lang = lang })">الرئيسية</a></li>
                             <li><a style="padding: 1.2rem 1rem !important;" href="@Url.Action("Index", "About", new { dir = dir, lang = lang })">من نحن</a></li>
-                            <li><a style="padding: 1.2rem 1rem !important;" href="@Url.Action("Index", "Contact", new { dir = dir, lang = lang })">تواصل</a></li>
+                            <li><a style="padding: 1.2rem 1rem !important;" href="@Url.Action("Index", "Contact", new { dir = dir, lang = lang })"> تواصل معنا </a></li>
 
                         </ul>
                     </div>
@@ -178,6 +178,18 @@
             else if (currentUrl.includes("/rtl/ar")) {
                 // Switch to LTR and English
                 newUrl = currentUrl.replace("/rtl/ar", "/ltr/en");
+            }
+            else if (currentUrl.includes("/TechnicalSupport")) {
+                // Switch to LTR and English
+                newUrl = currentUrl.replace("/TechnicalSupport", "/Home/Index/rtl/ar");
+            }
+            else if (currentUrl.includes("/JobCandidate")) {
+                // Switch to LTR and English
+                newUrl = currentUrl.replace("/JobCandidate", "/Home/Index/rtl/ar");
+            }
+            else if (currentUrl.includes("/Contact")) {
+                // Switch to LTR and English
+                newUrl = currentUrl.replace("/Contact", "/Contact/Index/rtl/ar");
             }
             else {
                 // If neither /ltr/en nor /rtl/ar exists, append /ltr/en to the URL

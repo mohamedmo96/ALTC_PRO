@@ -5,7 +5,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Hosting;
 using System.IO;
 using Microsoft.Extensions.Hosting;
-using Amazon.Runtime.Internal;
 
 namespace ALTC_Website.Controllers
 {

@@ -15,8 +15,10 @@ namespace ALTC_Website.Controllers
             requestService = _requestService;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(string dir, string lang)
         {
+            ViewData["Dir"] = dir;
+            ViewData["Lang"] = lang;
             return View();
         }
         public IActionResult GetAll()
@@ -30,7 +32,7 @@ namespace ALTC_Website.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult Create(TechnicalSupport requst)
+        public IActionResult Create(TechnicalSupport requst, string dir, string lang)
         {
             if (!ModelState.IsValid)
             {
@@ -38,7 +40,7 @@ namespace ALTC_Website.Controllers
             }
             requestService.Create(requst);
 
-            return RedirectToAction("Index");
+            return RedirectToAction( "Index" , "TechnicalSupport", new {  dir=dir,  lang=lang });
         }
     }
 }

@@ -237,6 +237,18 @@
                 // Switch to LTR and English
                 newUrl = currentUrl.replace("/rtl/ar", "/ltr/en");
             }
+            else if (currentUrl.includes("/TechnicalSupport")) {
+                // Switch to LTR and English
+                                newUrl = currentUrl.replace("/TechnicalSupport", "/Home/Index/rtl/ar");
+            }
+            else if (currentUrl.includes("/JobCandidate")) {
+                // Switch to LTR and English
+                newUrl = currentUrl.replace("/JobCandidate", "/Home/Index/rtl/ar");
+            }
+            else if (currentUrl.includes("/Contact")) {
+                // Switch to LTR and English
+                newUrl = currentUrl.replace("/Contact", "/Contact/Index/rtl/ar");
+            }
             else {
                 // If neither /ltr/en nor /rtl/ar exists, append /ltr/en to the URL
                 newUrl = currentUrl + "Home/Index/rtl/ar";
