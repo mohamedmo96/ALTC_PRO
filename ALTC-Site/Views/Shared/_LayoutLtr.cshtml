@@ -62,24 +62,50 @@
     string lang = "en";
    
 }
+
+<style>
+    .language-item {
+        display: flex;
+        align-items: center;
+        justify-content:center;
+    }
+
+    .language-text {
+        padding: 1.2rem 1rem !important;
+    }
+
+    .language-icon {
+        width: 22px;
+        margin-left: 5px;
+        
+    }
+</style>
 <body class="size-1140">
     <!-- PREMIUM FEATURES BUTTON -->
     <div id="page-wrapper">
         <!-- HEADER -->
-        <header  role="banner" class="position-absolute margin-m-top-0 margin-s-top-0">
+        <header  role="banner" class="position-absolute margin-m-top-0 margin-s-top-0 ">
             <!-- Top Navigation -->
-            <nav class="background-transparent background-transparent-hightlight full-width sticky     box-shadow: 0px 1px 4px whitesmoke;" style="display: flex; align-items: center; line-height: 80%;">
-                <div class="s-12 l-2">
-                    <a href="" class="logo">
+            <nav style="box-shadow: 3px 3px 2px rgba(0, 0, 0, .05); display: flex;  align-items: center !important;" class="eng_layout background-transparent background-transparent-hightlight full-width sticky     box-shadow: 0px 1px 4px whitesmoke;" style="display: flex; align-items: center; line-height: 80%;">
+               
+                <div style="   " class="s-12 l-2 media-logo">
+                    <a style="display:inline-block" href="" class="logo">
                         <img style="width:43%" class="logo-before" src="~/assets/img/altc-logo2.png" alt="">
-                        <img style="width:43%" class="logo-after" src="~/assets/img/altc-logo2.png" alt="">
+                            <img style="width:43%;" class="logo-after" src="~/assets/img/altc-logo2.png" alt="">
+                        
                     </a>
                 </div>
-                <div class="s-12 l-10">
+                <div class="s-12 l-10" style="width: 100%;">
                     <div class="top-nav right">
                         <ul class="right chevron " style='margin-bottom:unset !important'>
                            
-                            <li><a onclick="toggleLanguage()" style="padding: 1.2rem 1rem !important;">العربية</a></li>
+                        
+                            <li class="language-item">
+                                <span style="transform:translateX(7px)" class="language-icon">
+                                     <img src="~/img/saudi-arabia.png" alt=""> 
+
+                                </span> <a onclick="toggleLanguage()" class="language-text">العربية</a>
+                            </li>
 
 
                             @* <li><a style="color:red; padding: 1.2rem 1rem !important;" class="nav-link scrollto" asp-area="Admin" asp-controller="Home" asp-action="">Dashboard</a></li> *@
@@ -274,11 +300,11 @@
 
     <!-- Template Main JS File -->
     <script src="~/assets/js/main.js"></script>
-    <script type="text/javascript" src="~/js/jquery.events.touch.js"></script>
-    <script type="text/javascript" src="~/owl-carousel/owl.carousel.js"></script>
+@*     <script type="text/javascript" src="~/js/jquery.events.touch.js"></script>
+ *@    <script type="text/javascript" src="~/owl-carousel/owl.carousel.js"></script>
     <script type="text/javascript" src="~/js/template-scripts.js"></script>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+@*     <script src="~/lib/jquery/dist/jquery.min.js"></script>
+ *@    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     <script src="https://kit.fontawesome.com/1c2c2462bf.js" crossorigin="anonymous"></script>
     @await RenderSectionAsync("Scripts", required: false)

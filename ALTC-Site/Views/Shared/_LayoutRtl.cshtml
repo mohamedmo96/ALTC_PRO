@@ -61,6 +61,22 @@
     string dir = "rtl";
     string lang = "ar";
 }
+<style>
+    .language-item {
+        display: flex;
+        align-items: center;
+        justify-content:center;
+    }
+
+    .language-text {
+        padding: 1.2rem 1rem !important;
+    }
+
+    .language-icon {
+        width: 22px;
+        margin-left: 5px;
+    }
+</style>
 <body class="size-1140">
     <!-- PREMIUM FEATURES BUTTON -->
     <div id="page-wrapper">
@@ -68,18 +84,18 @@
       
         <header role="banner" class="position-absolute margin-m-top-0 margin-s-top-0">
             <!-- Top Navigation -->
-            <nav class="z-index:99999999; background-transparent background-transparent-hightlight full-width sticky     box-shadow: 0px 1px 4px whitesmoke;" style="display: flex; align-items: center; line-height: 80%;">
-                <div class="s-12 l-2">
-                    <a href="" class="logo">
-                        <img style="width:43%" class="logo-before" src="~/assets/img/altc-logo2.png" alt="">
-                        <img style="width:43%" class="logo-after" src="~/assets/img/altc-logo2.png" alt="">
-                    </a>
-                </div>
+            <nav  class="z-index:99999999; background-transparent background-transparent-hightlight full-width sticky  ar_layout " style="display: flex; align-items: center; line-height: 80%;  box-shadow: 3px 3px 2px rgba(0, 0, 0, .05);">
+               
                 <div class="s-12 l-10">
-                    <div class="top-nav right">
-                        <ul class="right chevron " style='margin-bottom:unset !important'>
+                    <div class="top-nav ">
+                        <ul class="left chevron " style='margin-bottom:unset !important'>
 
-                             <li><a  onclick="toggleLanguage()"  style="padding: 1.2rem 1rem !important; ">English</a></li> 
+                           
+                            <li class="language-item">
+                                <span style="transform:translateX(7px)" class="language-icon">
+                                    <img src="~/img/united-kingdom.png" alt="">
+                                </span> <a onclick="toggleLanguage()" class="language-text">English</a>
+                            </li>
 
                             @* <li><a style=" color:red" class="nav-link scrollto" asp-area="Admin" asp-controller="Home" asp-action=""> لوحة التحكم </a></li> *@
                          
@@ -89,6 +105,13 @@
 
                         </ul>
                     </div>
+                </div>
+                <div class="s-12 l-2 media-logo">
+                    <a href="" class="logo">
+                        <img style="width:43%; float: right;" class="logo-before" src="~/assets/img/altc-logo2.png" alt="">
+                        <img style="width:43%; float: right;" class="logo-after" src="~/assets/img/altc-logo2.png" alt="">
+
+                    </a>
                 </div>
             </nav>
         </header>

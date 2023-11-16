@@ -252,11 +252,13 @@
         <!-- /.control-sidebar -->
     </div>
     <!-- ./wrapper -->
+    @await RenderSectionAsync("Scripts", required: false)
+
     <!-- jQuery -->
     <script src="~/Admin/plugins/jquery/jquery.min.js"></script>
     <!-- jQuery UI 1.11.4 -->
-    <script src="~/Admin/plugins/jquery-ui/jquery-ui.min.js"></script>
-    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+@*     <script src="~/Admin/plugins/jquery-ui/jquery-ui.min.js"></script>
+ *@    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
     <script>
         $.widget.bridge('uibutton', $.ui.button)
     </script>
@@ -287,7 +289,6 @@
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
     <script src="~/Admin/dist/js/pages/dashboard.js"></script>
 
-    @await RenderSectionAsync("Scripts", required: false)
 
 
 </body>

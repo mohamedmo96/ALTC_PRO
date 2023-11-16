@@ -25,18 +25,25 @@ namespace ALTC_Website.Controllers
         }
 
         [HttpGet]
-        public IActionResult Create(string lang)
+        public IActionResult Create(string dir, string lang)
         {
             ViewData["lang"] = lang;
+            ViewData["dir"] = dir;
+
             return PartialView();
         }
         [HttpPost]
-        public IActionResult Create(RequestVM requestVM,string lang="En") 
+        public IActionResult Create(RequestVM requestVM, string lang , string dir) 
         {
-            ViewData["lang"]=lang;
+            //ViewData["lang"]=lang;
+         //var  lang = ViewBag.lang;
+           //ViewData["dir"]=dir;
+           //var dir=ViewBag.dir;
             if(!ModelState.IsValid)
             {
-                return PartialView(requestVM);
+               // return RedirectToAction("Index", "contact");
+
+                 return PartialView(requestVM);
             }
             Request request = new Request() 
             {
@@ -54,8 +61,20 @@ namespace ALTC_Website.Controllers
             }
             
             requestService.Create(request);
-            return RedirectToAction("Index","contact");
-            //return PartialView();
+            return RedirectToAction("Index", "contact", new {dir=dir,lang=lang});
+            //return RedirectToAction("Index", "contact", new {dir=dir,lang=lang});
+           
+        }
+
+        public IActionResult ValidFileExtension(IFormFile file)
+        {
+            string[] extensions = { "png", "jpg" };
+            string extension = Path.GetExtension(file.FileName);
+            if (extensions.Contains(extension.ToLower()))
+            {
+                return Json(true);
+            }
+            return Json(false);
         }
     }
 }

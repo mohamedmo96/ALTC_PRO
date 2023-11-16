@@ -8,7 +8,7 @@ using System.Text.RegularExpressions;
 
 namespace ALTC_Site.Areas.Admin.Controllers
 {
-    [Authorize]
+   // [Authorize]
 
     [Area("Admin")]
     public class TeamController : Controller
@@ -36,6 +36,7 @@ namespace ALTC_Site.Areas.Admin.Controllers
         {
             var language = new List<string> { "En", "Ar" };//Enum.GetNames(typeof(Language)).ToString();
             ViewData["lang"] = language;
+           // return PartialView();
             return View();
         }
 
@@ -48,7 +49,7 @@ namespace ALTC_Site.Areas.Admin.Controllers
             {
               //  ModelState.AddModelError("Photo", "Invalid extension");
                 ViewData["lang"] = new List<string> { "En", "Ar" }; //Enum.GetNames(typeof(Language)).ToString();
-
+               // return PartialView(teamMemberVM);
                 return View(teamMemberVM);
             }
             Team teamMember = new Team()
@@ -103,7 +104,7 @@ namespace ALTC_Site.Areas.Admin.Controllers
                 Position = teamMember.Position,
                 Phone = teamMember.Phone,
                 Name = teamMember.Name,
-               // Language = teamMember.Language,
+                Language = teamMember.Language,
             };
             teamMemeberVM.PhotoUrl = Path.Combine(uploadPath, teamMember.PhotoName);
 
@@ -126,6 +127,7 @@ namespace ALTC_Site.Areas.Admin.Controllers
             teamMember.Linkedin=teamMemberVM.Linkedin;
             teamMember.Phone = teamMemberVM.Phone;
             teamMember.Name = teamMemberVM.Name;
+            teamMember.Language=teamMemberVM.Language;
             if (teamMemberVM.Photo!= null)
             {   
                 teamMember.PhotoName = ALTC_Website.Abstract.File.Upload(uploadPath, teamMemberVM.Photo);
