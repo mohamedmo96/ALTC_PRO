@@ -2509,7 +2509,33 @@ aside {
       text-align: left;
   }
 }
+.media-logo {
+    justify-content: start !important;
+}
+    .media-logo img {
+        float: left;
+
+    }
+
+    
 @media screen and (max-width:768px) {
+    header nav {
+        display: block !important;
+        display: unset !important;
+    }
+    .media-logo {
+        /*position: absolute !important;*/
+        display: flex !important;
+        justify-content: end !important;
+        float: right;
+        margin-top: 20px !important;
+    }
+        .media-logo img {
+            width: 60% !important;
+            float: right;
+            margin-right: 7px;
+            margin-top: 20px;
+        }
   header.position-absolute {
     background: #fff none repeat scroll 0 0;
     position: relative;
