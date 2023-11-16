@@ -2517,8 +2517,16 @@ aside {
 
     }
 
+
+
     
 @media screen and (max-width:768px) {
+    .eng_layout img.logo-after {
+        transform: translateX(-44px)
+    } 
+    .ar_layout img {
+        
+    }
     header nav {
         display: block !important;
         display: unset !important;
@@ -2526,9 +2534,11 @@ aside {
     .media-logo {
         /*position: absolute !important;*/
         display: flex !important;
-        justify-content: end !important;
+        /*justify-content: end !important;*/
         float: right;
         margin-top: 20px !important;
+        display: flex !important;
+        justify-content: end !important;
     }
         .media-logo img {
             width: 60% !important;
@@ -2536,10 +2546,12 @@ aside {
             margin-right: 7px;
             margin-top: 20px;
         }
-  header.position-absolute {
-    background: #fff none repeat scroll 0 0;
-    position: relative;
-  }
+
+    
+    header.position-absolute {
+        background: #fff none repeat scroll 0 0;
+        position: relative;
+    }
   nav {
     padding: 0;
   }

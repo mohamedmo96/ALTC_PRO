@@ -912,11 +912,12 @@ section {
 # Services
 --------------------------------------------------------------*/
 .services .icon-box {
-  text-align: center;
-  border: 1px solid #e2eefd;
-  padding: 80px 20px;
-  transition: all ease-in-out 0.3s;
-  background: #fff;
+    text-align: center;
+    border: 1px solid #e2eefd;
+    padding: 80px 20px;
+    transition: all ease-in-out 0.3s;
+    background: #fff;
+    margin: 11px 0;
 }
 
 .services .icon-box .icon {
