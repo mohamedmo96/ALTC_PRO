@@ -59,7 +59,7 @@
                     <h4>
                         Big Ideas, Creative people, New technologies
                     </h4>
-                
+
                     <form action="" method="post">
                         <input type="email" name="email"><input type="submit" value="Subscribe">
                     </form>
@@ -106,47 +106,19 @@
         </div>
 
         <div class="row">
+                @foreach (var item in ViewBag.data)
+                {
             <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
                 <div class="icon-box">
-                    <div class="icon"><img src="~/img/startup.png" /> </div>
-                    <h4><a href="">Digital Transformation</a></h4>
-                    <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+                            <div class="icon"><img src="/Files/@item.FileName" /> </div>
+                    <h4><a href="">@item.Name</a></h4>
+                            <p>@item.Details</p>
                 </div>
             </div>
+            }
+            
 
-            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
-                <div class="icon-box">
-                    <div class="icon"><img src="~/img/smo.png" /></div>
-                    <h4><a href="">Digital Marketing</a></h4>
-                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
-                </div>
-            </div>
 
-            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
-                <div class="icon-box">
-                    <div class="icon"><img src="~/img/m3.png" /></div>
-                    <h4><a href="">Web Solutions</a></h4>
-                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
-                <div class="icon-box">
-                    <div class="icon"><img src="~/img/ap.png" /></div>
-                    <h4><a href="">Mobile Solutions</a></h4>
-                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
-                <div class="icon-box">
-                    <div class="icon"><img src="~/img/c.png" /></div>
-                    <h4><a href="">Digital Content</a></h4>
-                    <p>Quis consequatur saepe eligendi voluptatem consequatur dolor consequuntur</p>
-                </div>
-            </div>
-
-          
 
         </div>
 
@@ -165,7 +137,7 @@ else
 <!-- ======= Hero Section ======= -->
 <section id="hero" class="d-flex align-items-center">
     <div class="container" data-aos="zoom-out" data-aos-delay="100">
-        <h1> التكنولوجيا العربية الرائدة <span> ALTC</span></h1>
+        <h1>   الشركه العربية الرائدة للتقنيه<span > ALTC</span></h1>
         <h2>حل تطوير مواقع الويب والتطبيقات لتحويل الأعمال التجارية وابتكارها.</h2>
         <daiv class="d-flex justify-content-center">
             <a href="/Contact" class="btn-get-started scrollto">ابدا</a>
@@ -232,48 +204,22 @@ else
             </p>
         </div>
 
-        <div class="row">
-            <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-                <div class="icon-box">
-                    <div class="icon"><img src="~/img/startup.png" /> </div>
-                    <h4><a href="">التحول الرقمي</a></h4>
-                    <p>المتعة والتلفيق والابتزاز الذين يحبذونهم أولئك الذين يشعرون بالألم والذين يكرهونهم</p>
-                </div>
-            </div>
+            <div class="row">
+                @foreach (var item in ViewBag.data)
+                {
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="icon-box">
+                            <div class="icon"><img src="/Files/@item.FileName" /> </div>
+                            <h4><a href="">@item.Name</a></h4>
+                            <p>@item.Details</p>
+                        </div>
+                    </div>
+                }
 
-            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
-                <div class="icon-box">
-                    <div class="icon"><img src="~/img/smo.png" /></div>
-                    <h4><a href="">التسويق الرقمي</a></h4>
-                    <p>المستغرب في أخذ الحق في النقد في مرحلة تسلية تظهر فيها التعديات</p>
-                </div>
-            </div>
 
-            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
-                <div class="icon-box">
-                    <div class="icon"><img src="~/img/m3.png" /></div>
-                    <h4><a href="">حلول الويب</a></h4>
-                    <p>الذين لا يستثنون سوى الذين يتولون مسؤولياتهم ويكونون متهمين بأداء أعمالهم</p>
-                </div>
-            </div>
 
-            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
-                <div class="icon-box">
-                    <div class="icon"><img src="~/img/ap.png" /></div>
-                    <h4><a href="">حلول الهواتف المحمولة</a></h4>
-                    <p>في مرحلة تجميل الواقع والاتهام والكراهية تلك التي تستحق المراقبة والاستغناء</p>
-                </div>
-            </div>
 
-            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
-                <div class="icon-box">
-                    <div class="icon"><img src="~/img/c.png" /></div>
-                    <h4><a href="">المحتوى الرقمي</a></h4>
-                    <p>تلك التي يتعين على الإنسان اتخاذها. لا يمكن أن تكون مطمئنة ومكرهة ومتجهة إلى الجواب</p>
-                </div>
             </div>
-
-        </div>
 
     </div>
 </section><!-- نهاية قسم الخدمات -->
