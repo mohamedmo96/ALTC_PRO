@@ -1,28 +1,16 @@
-﻿@model ALTC_WebSite.Models.Service
-
+﻿@model ALTC_Site.ViewModels.ServVM
 
 @{
-    string dir = "ltr";
-    string lang = "en";
-    Layout = "~/Views/Shared/_LayoutLtr.cshtml";
-    if (ViewData["Dir"] != null & ViewData["Lang"] != null)
-    {
-        dir = ViewData["Dir"].ToString();
-        lang = ViewData["Lang"].ToString();
-
-        if (dir == "rtl")
-        {
-            Layout = "~/Views/Shared/_LayoutRtl.cshtml";
-        }
-    }
+    ViewData["Title"] = "Create";
 }
-<h1>Edit</h1>
 
-<h4>Service</h4>
+<h1>Create</h1>
+
+<h4>ServVM</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Edit">
+        <form asp-action="Create" method="post" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="id" class="control-label"></label>
@@ -35,17 +23,22 @@
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Photo" class="control-label"></label>
-                <input asp-for="Photo" class="form-control" />
-                <span asp-validation-for="Photo" class="text-danger"></span>
-            </div>
-            <div class="form-group">
                 <label asp-for="Details" class="control-label"></label>
                 <input asp-for="Details" class="form-control" />
                 <span asp-validation-for="Details" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <label asp-for="File" class="control-label"></label>
+                <input asp-for="File" class="form-control" />
+                <span asp-validation-for="File" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="lang" class="control-label"></label>
+                <input asp-for="lang" class="form-control" />
+                <span asp-validation-for="lang" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>
     </div>
@@ -55,6 +48,3 @@
     <a asp-action="Index">Back to List</a>
 </div>
 
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}

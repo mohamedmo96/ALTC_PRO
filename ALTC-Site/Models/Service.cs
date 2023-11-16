@@ -9,7 +9,8 @@ namespace ALTC_WebSite.Models
         [BsonRepresentation(BsonType.ObjectId)]
         public string? id { get; set; }
         public string Name { get; set; }
-        public string? Photo { get; set; }
+        public string FileName { get; set; }
+        public string lang { get; set; }
         public string Details { get; set; }
     }
 }
