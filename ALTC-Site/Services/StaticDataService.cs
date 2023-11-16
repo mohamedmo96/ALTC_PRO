@@ -1,6 +1,7 @@
 ﻿
 using ALTC_Website.Models;
 using ALTC_WebSite.Models;
+using Microsoft.AspNetCore.Razor.Language;
 using Microsoft.Extensions.Options;
 using MongoDB.Bson;
 using MongoDB.Driver;
@@ -42,6 +43,14 @@ namespace ALTC_Website.Services
         {
             return StaticCollection.Find(_ => true).ToList();
         }
+        public StaticData GetById(string id)
+        {
+            return StaticCollection.Find(s => s.id == id).FirstOrDefault();
+        }
 
+        public void Update(StaticData staticData)
+        {
+            StaticCollection.ReplaceOne(s => s.id == staticData.id, staticData);
+        }
     }
 }

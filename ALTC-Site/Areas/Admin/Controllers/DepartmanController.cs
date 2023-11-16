@@ -5,7 +5,7 @@ using ALTC_WebSite.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Hosting;
 
-namespace ALTC_Site.Areas.Admin.Controllers
+namespace ALTC_Website.Areas.Admin.Controllers
 {
     [Area("Admin")]
     public class DepartmanController : Controller
@@ -20,9 +20,10 @@ namespace ALTC_Site.Areas.Admin.Controllers
             hostEnvironment = _webHostEnvironment;
 
         }
-        public IActionResult Index()
+        public IActionResult GetAll()
         {
-            return View();
+            var model = department.GetAll();
+            return View(model);
         }
         [HttpGet]
         public IActionResult Create()
@@ -37,6 +38,7 @@ namespace ALTC_Site.Areas.Admin.Controllers
             {
                 Name = requestVM.Name,
                 Describtion = requestVM.Describtion,
+                lang=requestVM.lang
 
             };
             if (requestVM.File != null)
@@ -52,6 +54,40 @@ namespace ALTC_Site.Areas.Admin.Controllers
             return RedirectToAction("index");
 
 
+        }
+                [HttpGet]
+        public IActionResult Edit(string id)
+        {
+            // Retrieve the StaticData object by id
+            var staticData = department.GetById(id);
+
+            // Check if the object is found
+            if (staticData == null)
+            {
+                return NotFound(); // Return a 404 Not Found response
+            }
+
+            // Pass the StaticData object to the view for editing
+            return View(staticData);
+        }
+        [HttpPost]
+        public IActionResult Edit(string id, Department request)
+        {
+            // Check if the provided id is different from the model id
+            if (id != request.id)
+            {
+                return NotFound(); // Return a 404 Not Found response
+            }
+
+            if (!ModelState.IsValid)
+            {
+                return View(request); // Return the view with validation errors
+            }
+
+            // Update the StaticData object
+            department.Update(request);
+
+            return RedirectToAction("GetAll");
         }
 
     }

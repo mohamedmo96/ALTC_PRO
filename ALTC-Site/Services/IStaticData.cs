@@ -6,7 +6,10 @@ namespace ALTC_Website.Services
     {
         void Create(StaticData  staticData);
         public List<StaticData> GetAll();
+
         void Delete(string id);
+        StaticData GetById(string id);
+        void Update(StaticData staticData);
 
     }
 }

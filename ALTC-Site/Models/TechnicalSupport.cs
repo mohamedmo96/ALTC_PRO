@@ -12,9 +12,8 @@ namespace ALTC_WebSite.Models
 
         [Required(ErrorMessage = "Name is required")]
         public string Name { get; set; }
-
         [Required(ErrorMessage = "Phone is required")]
-        [Phone(ErrorMessage = "Invalid phone number")]
+        [RegularExpression(@"^01\d{9}$", ErrorMessage = "Invalid phone number. The phone number must start with '01' and have a total length of 11 digits.")]
         public string Phone { get; set; }
 
         [Required(ErrorMessage = "Email is required")]

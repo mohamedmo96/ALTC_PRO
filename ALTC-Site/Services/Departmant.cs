@@ -24,6 +24,33 @@ namespace ALTC_Website.Services
                 AltcDatabaseSettings.Value.Department);
         }
 
-    
+        public void Create(Department department)
+        {
+
+            DeptCollection.InsertOne(department);
+        }
+
+        public List<Department> GetAll()
+        {
+            return DeptCollection.Find<Department>(x => true).ToList();
+        }
+        public void Delete(string id)
+        {
+            var filter = Builders<Department>.Filter.Eq("_id", ObjectId.Parse(id));
+            DeptCollection.DeleteOne(filter);
+        }
+        public Department GetById(string id)
+        {
+            return DeptCollection.Find(s => s.id == id).FirstOrDefault();
+        }
+        public List<Department> GetBylang(string lang)
+        {
+            return DeptCollection.Find(s => s.lang == lang).ToList();
+        }
+
+        public void Update(Department department)
+        {
+            DeptCollection.ReplaceOne(s => s.id == department.id, department);
+        }
     }
 }
